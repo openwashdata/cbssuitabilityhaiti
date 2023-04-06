@@ -2,3 +2,4 @@
 ^renv\.lock$
 ^cbssuitabilityhaiti\.Rproj$
 ^\.Rproj\.user$
+^data-raw$
