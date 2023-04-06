@@ -1,0 +1,7 @@
+.Rproj.user
+
+R/publish_openwashdata.R
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store
