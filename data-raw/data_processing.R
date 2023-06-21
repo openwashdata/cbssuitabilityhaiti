@@ -19,8 +19,8 @@ mwater <- st_read("data-raw/mWater water points/waterpoints_clip.shp") |>
 okap <- st_read("data-raw/Okap_Zonaj_Asenisman_USAID/Okap_Zonaj_Asenisman_USAID.shp") |>
   st_as_sf()
 
-wb <- st_read("data-raw/world_bank_flood_extents_caphaitien/100yr_Flood_Extent.shp") |>
-  st_as_sf()
+# wb <- st_read("data-raw/world_bank_flood_extents_caphaitien/100yr_Flood_Extent.shp") |>
+#   st_as_sf()
 
 # tidy data ---------------------------------------------------------------
 
@@ -28,7 +28,7 @@ okap |>
   glimpse()
 
 okap |>
-  tabyl(economy)
+  janitor::tabyl(economy)
 
 okap |>
   tabyl(ranking)
@@ -46,13 +46,20 @@ okap |>
 tm_shape(mwater) +
   tm_dots(col = "Type")
 
-tm_shape(wb) +
-  tm_borders()
+okap |>
+  filter(cte == "ctecaphaitien") |>
+  tm_shape() +
+  tm_borders() +
+  tm_fill(col = "density")
+
+okap |>
+  sf::st_drop_geometry() |>
+  as_tibble()
 
 tm_shape(okap) +
   tm_borders()
 
-
+okap
 
 ## code to prepare `DATASET` dataset goes here
 
