@@ -46,29 +46,56 @@ okap_eng <- okap |>
 
 # explore data ------------------------------------------------------------
 
+# explore mwater
+
 mwater |>
   count(Datasets..)
+mwater |>
+  qtm()
+tm_shape(mwater) +
+  tm_dots(col = "Type")
+mwater |>
+  tabyl(Administra)
+
+# explore okap
 
 okap |>
   glimpse()
-
-tm_shape(mwater) +
-  tm_dots(col = "Type")
-
 okap |>
-  filter(cte == "ctecaphaitien") |>
-  tm_shape() +
-  tm_borders() +
-  tm_fill(col = "density")
-
+  qtm()
+tm_shape(okap) +
+  tm_borders()
+# convert sf into tibble
 okap |>
   sf::st_drop_geometry() |>
   as_tibble()
-
-tm_shape(okap) +
-  tm_borders()
-
 okap
+
+# explore Cap-Haitien data
+
+# find Cap-Haitien data
+mwater |>
+  tabyl(Administra)
+okap |>
+  tabyl(cte)
+
+# filter Cap-Haitien mwater data
+cap_mwater <- mwater |>
+  filter(str_detect(Administra, "Cap Haitien"))
+
+# neighborhoods of Cap-Haitien according to their density
+# different types of sanitation systems in area arround Cap-Haitien
+okap |>
+  filter(cte == "ctecaphaitien") |>
+  tm_shape() +
+  tm_layout(bg.color = "lightblue") +
+  tm_borders() +
+  tm_fill(col = "density", palette = "YlOrBr") +
+  tm_scale_bar(breaks = c(0, 1, 2), text.size = 1) +
+  tm_shape(mwater) +
+  tm_dots(col = "Type", palette = "Blues")
+
+
 
 ## code to prepare `DATASET` dataset goes here
 
