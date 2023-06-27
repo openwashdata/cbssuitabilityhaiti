@@ -33,6 +33,15 @@ okap |>
 okap |>
   tabyl(ranking)
 
+# translate content to English
+okap_eng <- okap |>
+  mutate(density = c("least dense", "somewhat dense",
+                     "dense", "very dense",
+                     "most dense")[density_ra],
+         economy = c("medium", "low")[economy_nu],
+         aptitude = c("good", "medium", "bad")[match(aptitude, c("bonne", "moyenne", "mauvaise"))],
+         zoning = str_replace_all(zoning, "regroupe", "group"),
+         latrine = c("allowed", "not allowed")[match(latrine, c("fond perdu", "pas fond perdu"))])
 
 
 # explore data ------------------------------------------------------------
@@ -111,8 +120,8 @@ directories <- c("data/", "data/")
 file_names <- c("okap.rda", "mwater.rda")
 
 dictionary <- get_variable_info(data = list(okap, mwater),
-                  directory = directories,
-                  file_name = file_names)
+                                directory = directories,
+                                file_name = file_names)
 dictionary |>
   write_csv("data-raw/dictionary.csv")
 
