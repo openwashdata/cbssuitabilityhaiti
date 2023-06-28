@@ -129,6 +129,25 @@ cap_map <- cap_adm3 |>
 
 cap_map
 
+tmap_mode("view")
+
+cap_map
+
+okap |>
+  filter(cte == "ctecaphaitien") |>
+  tm_shape() +
+  tm_layout(bg.color = "lightblue") +
+  tm_borders() +
+  tm_fill(col = "density", palette = "YlOrBr") +
+  tm_scale_bar(breaks = c(0, 1, 2), text.size = 1) +
+  tm_shape(mwater) +
+  tm_dots(col = "Type", palette = "Blues")
+
+tmap_mode("plot")
+
+cap_map
+
+
 
 
 ## code to prepare `DATASET` dataset goes here
