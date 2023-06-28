@@ -22,6 +22,19 @@ okap <- st_read("data-raw/Okap_Zonaj_Asenisman_USAID/Okap_Zonaj_Asenisman_USAID.
 # wb <- st_read("data-raw/world_bank_flood_extents_caphaitien/100yr_Flood_Extent.shp") |>
 #   st_as_sf()
 
+# get 3rd level administrative areas in Haiti
+# # download and unzip maps from stanford data base
+# download.file(url = "https://stacks.stanford.edu/file/druid:kz179wf4778/data.zip?download=true",
+#               destfile = "data-raw/3rd-level-haiti-divisions.zip",
+#               mode = "wb")
+# unzip("data-raw/3rd-level-haiti-divisions.zip", exdir = "data-raw/haiti-adm3")
+# # remove zip file
+# file.remove("data-raw/3rd-level-haiti-divisions.zip")
+
+# read in 3rd administrative lvl spatial files
+haiti_adm3 <- st_read("data-raw/haiti-adm3/HTI_adm3.shp") |>
+  st_as_sf()
+
 # tidy data ---------------------------------------------------------------
 
 okap |>
@@ -72,6 +85,11 @@ okap |>
   as_tibble()
 okap
 
+# explore Haiti adm3 area data
+haiti_adm3 |> qtm() +
+  tmap_options(check.and.fix = TRUE)
+glimpse(haiti_adm3)
+
 
 ### explore Cap-Haitien data
 
@@ -81,24 +99,7 @@ mwater |>
 okap |>
   tabyl(cte)
 
-# get map areas of Haiti
-# # download and unzip maps from stanford data base
-# download.file(url = "https://stacks.stanford.edu/file/druid:kz179wf4778/data.zip?download=true",
-#               destfile = "data-raw/3rd-level-haiti-divisions.zip",
-#               mode = "wb")
-# unzip("data-raw/3rd-level-haiti-divisions.zip", exdir = "data-raw/haiti-adm3")
-# # remove zip file
-# file.remove("data-raw/3rd-level-haiti-divisions.zip")
-# read in spatial files
-haiti_adm3 <- st_read("data-raw/haiti-adm3/HTI_adm3.shp") |>
-  st_as_sf()
-
-# explore haiti data
-haiti_adm3 |> qtm() +
-  tmap_options(check.and.fix = TRUE)
-glimpse(haiti_adm3)
-
-# filter Cap-Haitien map data
+# filter Cap-Haitien adm3 map data
 cap_adm3 <- haiti_adm3 |>
   filter(ID_3 == 79) # select Cap-Haitien
 cap_adm3 <- haiti_adm3 |>
