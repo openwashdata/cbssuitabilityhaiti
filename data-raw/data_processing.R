@@ -250,3 +250,15 @@ usethis::use_package_doc()
 # ADd license
 usethis::use_ccby_license()
 
+# Add CITATION.cff file
+cffr::cff_write()
+
+
+
+
+
+
+
+
+
+

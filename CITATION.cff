@@ -1,0 +1,43 @@
+# -----------------------------------------------------------
+# CITATION file created with {cffr} R package, v0.5.0
+# See also: https://docs.ropensci.org/cffr/
+# -----------------------------------------------------------
+ 
+cff-version: 1.2.0
+message: 'To cite package "cbssuitabilityhaiti" in publications use:'
+type: software
+license: CC-BY-4.0
+title: 'cbssuitabilityhaiti: The Package contains data from the Soil projects in Haiti'
+version: 0.0.0.9000
+abstract: What the package does (one paragraph).
+authors:
+- family-names: Loos
+  given-names: Sebastian Camilo
+  email: seba.loos@hotmail.com
+  orcid: https://orcid.org/0000-0002-8830-1734
+- family-names: Last
+  given-names: First
+  email: first.last@example.com
+  orcid: https://orcid.org/YOUR-ORCID-ID
+contact:
+- family-names: Loos
+  given-names: Sebastian Camilo
+  email: seba.loos@hotmail.com
+  orcid: https://orcid.org/0000-0002-8830-1734
+- family-names: Last
+  given-names: First
+  email: first.last@example.com
+  orcid: https://orcid.org/YOUR-ORCID-ID
+references:
+- type: software
+  title: 'R: A Language and Environment for Statistical Computing'
+  notes: Depends
+  url: https://www.R-project.org/
+  authors:
+  - name: R Core Team
+  location:
+    name: Vienna, Austria
+  year: '2023'
+  institution:
+    name: R Foundation for Statistical Computing
+  version: '>= 2.10'
