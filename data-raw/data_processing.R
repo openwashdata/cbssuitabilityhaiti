@@ -207,3 +207,15 @@ dictionary |>
 
 dictionary |>
   openxlsx::write.xlsx("data-raw/dictionary.xlsx")
+
+# function that conversts dictionary as xlsx to csv for later use in roxygen
+update_dictionary <- function(dictionary_path) {
+  dictionary_excel <-
+    readxl::read_excel(dictionary_path)
+
+  dictionary_excel |>
+    readr::write_csv("data-raw/dictionary.csv")
+}
+
+update_dictionary("data-raw/dictionary.xlsx")
+
