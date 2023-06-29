@@ -242,5 +242,11 @@ openwashdata::generate_roxygen_docs("data-raw/dictionary.csv", output_file_path 
 # Add an additional package documentation to Package
 usethis::use_package_doc()
 
+# TODO
+# # Add dependencies
+# use_package("tmap")
 
+# DONE
+# ADd license
+usethis::use_ccby_license()
 
