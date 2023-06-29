@@ -1,5 +1,7 @@
 ---
 title: "examples"
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r, include = FALSE}
@@ -11,4 +13,92 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(cbssuitabilityhaiti)
+library(tidyverse)
+library(here)
+library(sf)
+library(tmap)
+library(spData)
+library(janitor)
+library(devtools)
+```
+
+```{r, echo= FALSE}
+# # get 3rd level administrative areas in Haiti
+# # download and unzip maps from stanford data base
+# utils::download.file(url = "https://stacks.stanford.edu/file/druid:kz179wf4778/data.zip?download=true",
+#               destfile = "vignettes/articles/3rd-level-haiti-divisions.zip",
+#               mode = "wb")
+# unzip("vignettes/articles/3rd-level-haiti-divisions.zip", exdir = "vignettes/articles/haiti-adm3")
+# # remove zip file
+# file.remove("vignettes/articles/3rd-level-haiti-divisions.zip")
+here::here()
+# read in 3rd administrative lvl spatial files
+haiti_adm3 <- st_read("vignettes/articles/haiti-adm3/HTI_adm3.shp") |>
+  st_as_sf()
+
+as_tibble(okap)
+as_tibble(mwater)
+as_tibble(haiti_adm3)
+```
+
+```{r eval = false, echo = false}
+### explore Cap-Haitien data
+
+# explore Haiti adm3 area data
+haiti_adm3 |> qtm() +
+  tmap_options(check.and.fix = TRUE)
+glimpse(haiti_adm3)
+
+# find Cap-Haitien data
+mwater |>
+  tabyl(Administra)
+okap |>
+  tabyl(cte)
+```
+
+```{r}
+# filter Cap-Haitien adm3 map data
+cap_adm3 <- haiti_adm3 |>
+  filter(ID_3 == 79) # select Cap-Haitien
+cap_adm3 <- haiti_adm3 |>
+  filter(ID_3 == 77|ID_3 == 78 | ID_3 == 79 | ID_3 == 81) # select North
+
+# filter Cap-Haitien mwater data
+cap_mwater <- mwater |>
+  filter(str_detect(Administra, "Cap Haitien"))
+
+# filter Cap-Haitien okap data
+cap_okap <- okap |>
+  filter(cte == "ctecaphaitien")
+
+# basic example plot
+# neighborhoods of Cap-Haitien according to their density
+# different types of sanitation systems in area arround Cap-Haitien
+cap_map <- cap_adm3 |>
+  tm_shape() +
+  tm_borders(lwd = 2) +
+  tm_layout(bg.color = "lightblue") +
+  tm_borders() +
+  tm_shape(cap_okap) +
+  tm_borders() +
+  tm_fill(col = "density", palette = "YlOrBr") +
+  tm_shape(cap_mwater) +
+  tm_dots(col = "Type", palette = "Blues")
+
+cap_map
+
+tmap_mode("view")
+
+cap_map
+
+okap |>
+  filter(cte == "ctecaphaitien") |>
+  tm_shape() +
+  tm_layout(bg.color = "lightblue") +
+  tm_borders() +
+  tm_fill(col = "density", palette = "YlOrBr") +
+  tm_scale_bar(breaks = c(0, 1, 2), text.size = 1) +
+  tm_shape(mwater) +
+  tm_dots(col = "Type", palette = "Blues")
+
 ```

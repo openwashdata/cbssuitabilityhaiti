@@ -50,7 +50,9 @@ Description of the Data. When/Where it was collected. For how long.
 
 The package provides access one data set.
 
-    library(cbssuitabilityhaiti)
+``` r
+library(cbssuitabilityhaiti)
+```
 
 ``` epoxy
 The `mwater` data set has {ncol(mwater)} variables and {nrow(mwater)} observations. For an overview of the variable names, see the following table.  
@@ -60,16 +62,19 @@ The `mwater` data set has {ncol(mwater)} variables and {nrow(mwater)} observatio
 mwater
 ```
 
-    # {r, echo=FALSE}
-    readr::read_csv("data-raw/dictionary.csv") |> 
-      dplyr::filter(file_name == "mwater.rda") |> 
-      dplyr::select(variable_name:description) |> 
-      knitr::kable()
+| variable_name | variable_type | description |
+|:--------------|:--------------|:------------|
+| Latitude.o    | double        | NA          |
+| Longitude     | double        | NA          |
+| Administra    | character     | NA          |
+| Type          | character     | NA          |
+| Date.added    | character     | NA          |
+| Datasets..    | character     | NA          |
+| geometry      | list          | NA          |
 
 A small visualisation of this data set
 
-    # {r, echo=FALSE}
-    qtm(mwater)
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
 
 ## Okap
 
@@ -89,8 +94,9 @@ Description of the Data. When/Where it was collected. For how long.
 
 The package provides access one data set.
 
-    # {r}
-    library(cbssuitabilityhaiti)
+``` r
+library(cbssuitabilityhaiti)
+```
 
 ``` epoxy
 The `okap` data set has {ncol(okap)} variables and {nrow(okap)} observations. For an overview of the variable names, see the following table.  
@@ -100,21 +106,25 @@ The `okap` data set has {ncol(okap)} variables and {nrow(okap)} observations. Fo
 okap
 ```
 
-    # {r, echo=FALSE}
-    readr::read_csv("data-raw/dictionary.csv") |> 
-      dplyr::filter(file_name == "mwater.rda") |> 
-      dplyr::select(variable_name:description) |> 
-      knitr::kable()
+| variable_name | variable_type | description |
+|:--------------|:--------------|:------------|
+| Latitude.o    | double        | NA          |
+| Longitude     | double        | NA          |
+| Administra    | character     | NA          |
+| Type          | character     | NA          |
+| Date.added    | character     | NA          |
+| Datasets..    | character     | NA          |
+| geometry      | list          | NA          |
 
 A small visualisation of this data set
 
-    # {r, echo=FALSE}
-    qtm(okap)
+<img src="man/figures/README-unnamed-chunk-12-1.png" width="100%" />
 
 ## Examples
 
 This is a basic example which shows you how to use the data:
 
-    # {r example}
-    library(cbssuitabilityhaiti)
-    ## basic example code
+``` r
+library(cbssuitabilityhaiti)
+## basic example code
+```

@@ -2,8 +2,6 @@
 output: github_document
 editor_options: 
   chunk_output_type: console
-execute:
-  eval: FALSE
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -85,7 +83,7 @@ Description of the Data. When/Where it was collected. For how long.
 
 The package provides access one data set.
 
-```{}
+```{r}
 library(cbssuitabilityhaiti)
 ```
 
@@ -99,8 +97,7 @@ mwater
 ```
 
 
-```{}
-# {r, echo=FALSE}
+```{r, echo=FALSE}
 readr::read_csv("data-raw/dictionary.csv") |> 
   dplyr::filter(file_name == "mwater.rda") |> 
   dplyr::select(variable_name:description) |> 
@@ -109,8 +106,7 @@ readr::read_csv("data-raw/dictionary.csv") |>
 
 A small visualisation of this data set
 
-```{}
-# {r, echo=FALSE}
+```{r, echo=FALSE}
 qtm(mwater)
 ```
 
@@ -135,8 +131,7 @@ Description of the Data. When/Where it was collected. For how long.
 
 The package provides access one data set.
 
-```{}
-# {r}
+```{r}
 library(cbssuitabilityhaiti)
 ```
 
@@ -149,8 +144,7 @@ The `okap` data set has {ncol(okap)} variables and {nrow(okap)} observations. Fo
 okap
 ```
 
-```{}
-# {r, echo=FALSE}
+```{r, echo=FALSE}
 readr::read_csv("data-raw/dictionary.csv") |> 
   dplyr::filter(file_name == "mwater.rda") |> 
   dplyr::select(variable_name:description) |> 
@@ -159,8 +153,7 @@ readr::read_csv("data-raw/dictionary.csv") |>
 
 A small visualisation of this data set
 
-```{}
-# {r, echo=FALSE}
+```{r, echo=FALSE}
 qtm(okap)
 ```
 
@@ -169,8 +162,7 @@ qtm(okap)
 
 This is a basic example which shows you how to use the data:
 
-```{}
-# {r example}
+```{r example}
 library(cbssuitabilityhaiti)
 ## basic example code
 ```
