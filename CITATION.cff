@@ -14,12 +14,13 @@ authors:
 - family-names: Loos
   given-names: Sebastian Camilo
   email: seba.loos@hotmail.com
-  orcid: https://orcid.org/0000-0002-8830-1734
+- family-names: Power
+  given-names: Max
+  email: email@email.com
 contact:
 - family-names: Loos
   given-names: Sebastian Camilo
   email: seba.loos@hotmail.com
-  orcid: https://orcid.org/0000-0002-8830-1734
 references:
 - type: software
   title: 'R: A Language and Environment for Statistical Computing'
@@ -33,3 +34,14 @@ references:
   institution:
     name: R Foundation for Statistical Computing
   version: '>= 2.10'
+- type: software
+  title: tmap
+  abstract: 'tmap: Thematic Maps'
+  notes: Suggests
+  url: https://github.com/r-tmap/tmap
+  repository: https://CRAN.R-project.org/package=tmap
+  authors:
+  - family-names: Tennekes
+    given-names: Martijn
+    email: mtennekes@gmail.com
+  year: '2023'
