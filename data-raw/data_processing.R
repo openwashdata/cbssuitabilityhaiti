@@ -10,6 +10,7 @@ library(sf)
 library(tmap)
 library(spData)
 library(janitor)
+library(devtools)
 
 # read data ---------------------------------------------------------------
 
@@ -202,11 +203,12 @@ file_names <- c("okap.rda", "mwater.rda")
 dictionary <- get_variable_info(data = list(okap, mwater),
                                 directory = directories,
                                 file_name = file_names)
-dictionary |>
-  write_csv("data-raw/dictionary.csv")
 
-dictionary |>
-  openxlsx::write.xlsx("data-raw/dictionary.xlsx")
+# dictionary |>
+#   write_csv("data-raw/dictionary.csv")
+
+# dictionary |>
+#   openxlsx::write.xlsx("data-raw/dictionary.xlsx")
 
 # function that conversts dictionary as xlsx to csv for later use in roxygen
 update_dictionary <- function(dictionary_path) {
@@ -217,5 +219,28 @@ update_dictionary <- function(dictionary_path) {
     readr::write_csv("data-raw/dictionary.csv")
 }
 
-update_dictionary("data-raw/dictionary.xlsx")
+# TODO
+# update_dictionary("data-raw/dictionary.xlsx")
+
+
+# Add documentation -------------------------------------------------------
+devtools::install_github("openwashdata/openwashdata")
+library(openwashdata)
+
+# Done
+# Initiate documentation folder for writing up metadata and documentation for objects
+# dir.create("R")
+# usethis::use_r("mwater")
+# usethis::use_r("okap")
+
+# TODO
+# Add documentation from data dictionary to script as roxygen
+openwashdata::generate_roxygen_docs("data-raw/dictionary.csv", output_file_path = "R/okap.R")
+openwashdata::generate_roxygen_docs("data-raw/dictionary.csv", output_file_path = "R/mwater.R")
+
+# DONE
+# Add an additional package documentation to Package
+usethis::use_package_doc()
+
+
 
