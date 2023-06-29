@@ -259,7 +259,8 @@ devtools::document()  # "Cmd + Shift + D"
 devtools::check()     # "Cmd + Shift + E"
 devtools::install()   # "Cmd + Shift + B"
 
-
+# Create a rmd README for package
+usethis::use_readme_rmd()
 
 
 

@@ -5,3 +5,4 @@
 ^data-raw$
 ^LICENSE\.md$
 ^CITATION\.cff$
+^README\.Rmd$
