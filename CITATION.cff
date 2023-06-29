@@ -15,19 +15,11 @@ authors:
   given-names: Sebastian Camilo
   email: seba.loos@hotmail.com
   orcid: https://orcid.org/0000-0002-8830-1734
-- family-names: Last
-  given-names: First
-  email: first.last@example.com
-  orcid: https://orcid.org/YOUR-ORCID-ID
 contact:
 - family-names: Loos
   given-names: Sebastian Camilo
   email: seba.loos@hotmail.com
   orcid: https://orcid.org/0000-0002-8830-1734
-- family-names: Last
-  given-names: First
-  email: first.last@example.com
-  orcid: https://orcid.org/YOUR-ORCID-ID
 references:
 - type: software
   title: 'R: A Language and Environment for Statistical Computing'

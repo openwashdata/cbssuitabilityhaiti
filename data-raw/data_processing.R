@@ -253,6 +253,12 @@ usethis::use_ccby_license()
 # Add CITATION.cff file
 cffr::cff_write()
 
+# load, document, check, and install
+devtools::load_all()  # "Cmd + Shift + L"
+devtools::document()  # "Cmd + Shift + D"
+devtools::check()     # "Cmd + Shift + E"
+devtools::install()   # "Cmd + Shift + B"
+
 
 
 
