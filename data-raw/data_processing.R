@@ -242,14 +242,16 @@ openwashdata::generate_roxygen_docs("data-raw/dictionary.csv", output_file_path 
 # Add an additional package documentation to Package
 usethis::use_package_doc()
 
-# TODO
-# # Add dependencies
+# NOT NEEDED
+# # Add dependencies in DESCRIPTION file
+# use_package("tidyverse")
 # use_package("tmap")
 
 # DONE
 # ADd license
 usethis::use_ccby_license()
 
+# DONE
 # Add CITATION.cff file
 cffr::cff_write()
 
@@ -259,12 +261,14 @@ devtools::document()  # "Cmd + Shift + D"
 devtools::check()     # "Cmd + Shift + E"
 devtools::install()   # "Cmd + Shift + B"
 
+# DONE
 # Create a rmd README for package
 usethis::use_readme_rmd()
 
-
-
-
+# DONE
+# Create an examples article for the package
+usethis::use_article("examples")
+devtools::build_rmd("vignettes/articles/examples.Rmd")
 
 
 
