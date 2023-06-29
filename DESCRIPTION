@@ -1,9 +1,11 @@
 Package: cbssuitabilityhaiti
-Title: What the Package Does (One Line, Title Case)
+Title: The Package contains data from the Soil projects in Haiti
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R: c(
+    person("Sebastian", "Loos", , "seba.loos@hotmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-8830-1734")),
     person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           comment = c(ORCID = "YOUR-ORCID-ID")))
 Description: What the package does (one paragraph).
 License: CC BY 4.0
 Encoding: UTF-8
@@ -12,3 +14,4 @@ RoxygenNote: 7.2.3
 Depends: 
     R (>= 2.10)
 LazyData: true
+Language: en-GB
