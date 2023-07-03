@@ -133,4 +133,3 @@ dictionary <- get_variable_info(data = list(okap, mwater),
 
 # dictionary |>
 #   openxlsx::write.xlsx("data-raw/dictionary.xlsx")
-
