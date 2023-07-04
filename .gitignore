@@ -5,4 +5,3 @@ R/publish_openwashdata.R
 .Rdata
 .httr-oauth
 .DS_Store
-docs
