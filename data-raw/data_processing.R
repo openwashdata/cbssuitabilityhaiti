@@ -81,9 +81,11 @@ usethis::use_data(mwater, okap, overwrite = TRUE)
 
 fs::dir_create(here::here("inst", "extdata"))
 
-# write_csv(DATASET, here::here("inst", "extdata", "DATASET.csv"))
-#
-# openxlsx::write.xlsx(DATASET, here::here("inst", "extdata", "DATASET.xlsx"))
+write_csv(mwater, here::here("inst", "extdata", "mwater.csv"))
+write_csv(okap, here::here("inst", "extdata", "okap.csv"))
+
+openxlsx::write.xlsx(sf::st_drop_geometry(mwater), here::here("inst", "extdata", "mwater.xlsx"))
+openxlsx::write.xlsx(sf::st_drop_geometry(okap), here::here("inst", "extdata", "okap.xlsx"))
 
 # prepare dictionaries ----------------------------------------------------
 
