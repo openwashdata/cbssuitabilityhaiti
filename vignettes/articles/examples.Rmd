@@ -33,7 +33,7 @@ library(devtools)
 # file.remove("vignettes/articles/3rd-level-haiti-divisions.zip")
 here::here()
 # read in 3rd administrative lvl spatial files
-haiti_adm3 <- st_read("vignettes/articles/haiti-adm3/HTI_adm3.shp") |>
+haiti_adm3 <- st_read("haiti-adm3/HTI_adm3.shp") |>
   st_as_sf()
 
 as_tibble(okap)
@@ -41,7 +41,7 @@ as_tibble(mwater)
 as_tibble(haiti_adm3)
 ```
 
-```{r eval = false, echo = false}
+```{r echo=FALSE}
 ### explore Cap-Haitien data
 
 # explore Haiti adm3 area data

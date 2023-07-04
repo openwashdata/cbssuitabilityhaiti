@@ -146,7 +146,7 @@ okap
 
 ```{r, echo=FALSE}
 readr::read_csv("data-raw/dictionary.csv") |> 
-  dplyr::filter(file_name == "mwater.rda") |> 
+  dplyr::filter(file_name == "okap.rda") |> 
   dplyr::select(variable_name:description) |> 
   knitr::kable()
 ```

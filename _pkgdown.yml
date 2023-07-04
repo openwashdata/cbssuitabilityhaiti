@@ -1,0 +1,27 @@
+url: https://github.com/openwashdata/cbssuitabilityhaiti
+template:
+  bootstrap: 5
+  includes:
+    in_header: |
+      <script defer data-domain="global-health-engineering.github.io/durbanplasticwaste" src="https://plausible.io/js/script.js"></script>
+
+home:
+  links:
+    - icon: github
+      text: GitHub repository
+      href: https://github.com/openwashdata/cbssuitabilityhaiti
+  sidebar:
+    structure: [links, citation, authors, dev, custom]
+    components:
+      custom:
+        title: Funding
+        text: This project was funded by the [Global Health Engineering group at ETH Zurich](https://ghe.ethz.ch/).
+
+authors:
+  footer:
+    roles: [cre, fnd]
+    text: "Crafted by"
+  sidebar:
+    roles: [cre, aut, ctb]
+    before: "So *who* does the work?"
+    after: "Thanks all!"
