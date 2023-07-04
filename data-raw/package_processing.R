@@ -37,7 +37,7 @@ update_dictionary <- function(dictionary_path) {
 # TODO
 # Add documentation from data dictionary to script as roxygen
 openwashdata::generate_roxygen_docs("data-raw/dictionary.csv", output_file_path = "R/okap.R")
-openwashdata::generate_roxygen_docs("data-raw/dictionary.csv", output_file_path = "R/mwater.R")
+# openwashdata::generate_roxygen_docs("data-raw/dictionary.csv", output_file_path = "R/mwater.R")
 
 # DONE
 # # Add an additional package documentation to Package

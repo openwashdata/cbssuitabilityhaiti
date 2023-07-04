@@ -62,15 +62,15 @@ The `mwater` data set has {ncol(mwater)} variables and {nrow(mwater)} observatio
 mwater
 ```
 
-| variable_name | variable_type | description |
-|:--------------|:--------------|:------------|
-| Latitude.o    | double        | NA          |
-| Longitude     | double        | NA          |
-| Administra    | character     | NA          |
-| Type          | character     | NA          |
-| Date.added    | character     | NA          |
-| Datasets..    | character     | NA          |
-| geometry      | list          | NA          |
+| variable_name | variable_type | description                                                                                  |
+|:--------------|:--------------|:---------------------------------------------------------------------------------------------|
+| Latitude.o    | double        | Lattitude coordinate                                                                         |
+| Longitude     | double        | Longitude coordinate                                                                         |
+| Administra    | character     | Communal section- smallest administrative unit in Haiti                                      |
+| Type          | character     | Type of water access point                                                                   |
+| Date.added    | character     | Date water access point was added to mWater                                                  |
+| Datasets..    | character     | Dataset in mWater that point is part of, including organizaiton that is responsible for data |
+| geometry      | list          | Geospatial data of the different access points that were added to mWater                     |
 
 A small visualisation of this data set
 
@@ -106,29 +106,29 @@ The `okap` data set has {ncol(okap)} variables and {nrow(okap)} observations. Fo
 okap
 ```
 
-| variable_name | variable_type | description |
-|:--------------|:--------------|:------------|
-| neighborho    | double        | NA          |
-| name          | character     | NA          |
-| sup_km2       | double        | NA          |
-| sector_id     | double        | NA          |
-| cte           | character     | NA          |
-| qlty_water    | double        | NA          |
-| qty_water     | double        | NA          |
-| health_car    | double        | NA          |
-| schooling     | double        | NA          |
-| transport     | double        | NA          |
-| economy       | character     | NA          |
-| ranking       | double        | NA          |
-| sup_bati      | double        | NA          |
-| density       | character     | NA          |
-| aptitude      | character     | NA          |
-| zoning        | character     | NA          |
-| latrine       | character     | NA          |
-| standing      | character     | NA          |
-| density_ra    | double        | NA          |
-| economy_nu    | double        | NA          |
-| geometry      | list          | NA          |
+| variable_name | variable_type | description                                                                                                 |
+|:--------------|:--------------|:------------------------------------------------------------------------------------------------------------|
+| neighborho    | double        | Unique identifying number for each neighborhood unit                                                        |
+| name          | character     | Name of each nieghborhood unit                                                                              |
+| sup_km2       | double        | Area of neighborhood in square km                                                                           |
+| sector_id     | double        | NULL                                                                                                        |
+| cte           | character     | Name of commune (administrative unit in Haiti)                                                              |
+| qlty_water    | double        | Unknown                                                                                                     |
+| qty_water     | double        | Unknown                                                                                                     |
+| health_car    | double        | Unknown                                                                                                     |
+| schooling     | double        | Unknown                                                                                                     |
+| transport     | double        | Unknown                                                                                                     |
+| economy       | character     | Categorical socioeconomic status (low, medium)                                                              |
+| ranking       | double        | Unknown                                                                                                     |
+| sup_bati      | double        | area of neihborhood covered by buildings in square meters                                                   |
+| density       | character     | Categorical population density (least dense, somewhat dense, dense, very dense, most dense)                 |
+| aptitude      | character     | suitability of the site for a wastewater treatment system                                                   |
+| zoning        | character     | “group” if collective or grouped sanitation is possible in short term.                                      |
+| latrine       | character     | Suggested pit latrine and septic allowance (allowed, not allowed)                                           |
+| standing      | character     | Unknown                                                                                                     |
+| density_ra    | double        | Catgoriccal population density according to the description of the variable “density” (values from 1 to 5)  |
+| economy_nu    | double        | Categotical socioeconomic status according to the description of the variable “economy” (1=low, 2 = medium) |
+| geometry      | list          | Geospatial data of the neighborhood stored as a polygon                                                     |
 
 A small visualisation of this data set
 
