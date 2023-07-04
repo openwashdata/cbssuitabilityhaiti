@@ -9,7 +9,12 @@
 What the package does (one paragraph).
 }
 \author{
-\strong{Maintainer}: Sebastian Camilo Loos \email{seba.loos@hotmail.com} (\href{https://orcid.org/0000-0002-8830-1734}{ORCID})
+\strong{Maintainer}: Sebastian Camilo Loos \email{seba.loos@hotmail.com} (0000-0002-8830-1734)
+
+Authors:
+\itemize{
+  \item Max Power \email{email@email.com} (0000-0002-8830-1734)
+}
 
 }
 \keyword{internal}

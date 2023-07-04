@@ -1,4 +1,11 @@
-#' \describe{
+#' Categorized data for neighborhoods in Haiti
+#'
+#' Description
+#' Description
+#' Description
+#'
+#' @format A tibble with 198 rows and 21 variables:
+#' #' \describe{
 #'   \item{neighborho}{NA}
 #'   \item{name}{NA}
 #'   \item{sup_km2}{NA}
@@ -20,11 +27,6 @@
 #'   \item{density_ra}{NA}
 #'   \item{economy_nu}{NA}
 #'   \item{geometry}{NA}
-#'   \item{Latitude.o}{NA}
-#'   \item{Longitude}{NA}
-#'   \item{Administra}{NA}
-#'   \item{Type}{NA}
-#'   \item{Date.added}{NA}
-#'   \item{Datasets..}{NA}
-#'   \item{geometry}{NA}
 #' }
+#'
+"okap"
