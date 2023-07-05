@@ -2,6 +2,8 @@
 output: github_document
 editor_options: 
   chunk_output_type: console
+  markdown: 
+    wrap: 72
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -23,26 +25,28 @@ library(tmap)
 # cbssuitabilityhaiti
 
 <!-- badges: start -->
-DOI
-R-CMD-Check
+
+DOI R-CMD-Check
+
 <!-- badges: end -->
 
 # Overview
 
-This packages combines data collected as part of ?????? conducted in Haiti. The projects were 
-supported by SOIL at ??????.
+This packages combines data collected as part of ?????? conducted in
+Haiti. The projects were supported by SOIL at ??????.
 
 ## Installation
 
-You can install the development version of cbssuitabilityhaiti from [GitHub](https://github.com/) with:
+You can install the development version of cbssuitabilityhaiti from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("openwashdata/cbssuitabilityhaiti")
 ```
 
-Alternatively, you can download the individual datasets as a CSV or XLSX file 
-from the table below.
+Alternatively, you can download the individual datasets as a CSV or XLSX
+file from the table below.
 
 ```{r, echo=FALSE}
 
@@ -60,24 +64,22 @@ read_csv("data-raw/dictionary.csv") |>
 
 ```
 
-
 # Projects
 
 ## mWater
 
-(One sentence) 
-Evaluating the potential of ........
+(One sentence) Evaluating the potential of ........
 
 ### Description
 
-(One to two short paragraphs)
-This Project focuses on determining .......
+(One to two short paragraphs) This Project focuses on determining
+.......
 
 ### Research Question
 
 (One to two questions)
 
-### Data 
+### Data
 
 Description of the Data. When/Where it was collected. For how long.
 
@@ -96,7 +98,6 @@ The `mwater` data set has {ncol(mwater)} variables and {nrow(mwater)} observatio
 mwater
 ```
 
-
 ```{r, echo=FALSE}
 readr::read_csv("data-raw/dictionary.csv") |> 
   dplyr::filter(file_name == "mwater.rda") |> 
@@ -110,22 +111,20 @@ A small visualisation of this data set
 qtm(mwater)
 ```
 
-
 ## Okap
 
-(One sentence) 
-Evaluating the potential of ........
+(One sentence) Evaluating the potential of ........
 
 ### Description
 
-(One to two short paragraphs)
-This Project focuses on determining .......
+(One to two short paragraphs) This Project focuses on determining
+.......
 
 ### Research Question
 
 (One to two questions)
 
-### Data 
+### Data
 
 Description of the Data. When/Where it was collected. For how long.
 
@@ -156,7 +155,6 @@ A small visualisation of this data set
 ```{r, echo=FALSE}
 qtm(okap)
 ```
-
 
 ## Examples
 

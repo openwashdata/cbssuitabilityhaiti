@@ -4,14 +4,16 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r, include = FALSE}
+```{r unknown_chunk, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 ```
 
-```{r setup}
+## Load Packages
+
+```{r setup, output = FALSE, message = FALSE, warning = FALSE}
 library(cbssuitabilityhaiti)
 library(tidyverse)
 library(here)
@@ -22,41 +24,60 @@ library(janitor)
 library(devtools)
 ```
 
-```{r, echo= FALSE}
+```{r read_adm3, message=FALSE, warning=FALSE, include=FALSE, output=FALSE}
 # # get 3rd level administrative areas in Haiti
 # # download and unzip maps from stanford data base
 # utils::download.file(url = "https://stacks.stanford.edu/file/druid:kz179wf4778/data.zip?download=true",
-#               destfile = "vignettes/articles/3rd-level-haiti-divisions.zip",
+#               destfile = here::here("vignettes", "articles", "3rd-level-haiti-divisions.zip",
 #               mode = "wb")
-# unzip("vignettes/articles/3rd-level-haiti-divisions.zip", exdir = "vignettes/articles/haiti-adm3")
+# unzip(here::here("vignettes", "articles", "3rd-level-haiti-divisions.zip"),
+#       exdir = here::here("vignettes", "articles", "haiti-adm3"))
 # # remove zip file
-# file.remove("vignettes/articles/3rd-level-haiti-divisions.zip")
-here::here()
+# file.remove(here::here("vignettes", "articles", "3rd-level-haiti-divisions.zip")
+
 # read in 3rd administrative lvl spatial files
-haiti_adm3 <- st_read("haiti-adm3/HTI_adm3.shp") |>
+haiti_adm3 <- st_read(here::here("vignettes", "articles","haiti-adm3","HTI_adm3.shp")) |>
   st_as_sf()
 
+```
+
+## Show datasets
+
+```{r tibbles}
 as_tibble(okap)
 as_tibble(mwater)
 as_tibble(haiti_adm3)
 ```
 
-```{r echo=FALSE}
+## Background
+
+Haiti is a small island state in the Caribbean sea. It has four administrative levels where the 3rd level is used to emphasize the data in this article. The 3rd administrative level contains `r nrow(haiti_adm3)` areas. For this article the extended area around Cap Haïtien and l'Acul-du-Nord has been explored as depicted in @fig-northern-area.
+
+```{r fig-northern-area, echo=FALSE, message = FALSE, warning = FALSE}
+#| label: fig-northern-area
+#| fig-cap: "Map of the Haiti"
+
 ### explore Cap-Haitien data
 
 # explore Haiti adm3 area data
-haiti_adm3 |> qtm() +
-  tmap_options(check.and.fix = TRUE)
-glimpse(haiti_adm3)
+
+haiti_adm3 |> 
+  tm_shape() +
+  tmap_options(check.and.fix = TRUE) +
+  tm_borders() +
+  tm_fill(col = "orange") +
+  tm_shape(filter(haiti_adm3, (ID_2 == 24 | ID_2 == 25) & ID_3 != 76 & ID_3 != 80)) +
+  tm_borders() +
+  tm_fill(col = "yellow")
 
 # find Cap-Haitien data
-mwater |>
-  tabyl(Administra)
-okap |>
-  tabyl(cte)
+# mwater |>
+#   tabyl(Administra)
+# okap |>
+#   tabyl(cte)
 ```
 
-```{r}
+```{r filter-cap, echo = FALSE}
 # filter Cap-Haitien adm3 map data
 cap_adm3 <- haiti_adm3 |>
   filter(ID_3 == 79) # select Cap-Haitien
@@ -70,6 +91,11 @@ cap_mwater <- mwater |>
 # filter Cap-Haitien okap data
 cap_okap <- okap |>
   filter(cte == "ctecaphaitien")
+```
+
+```{r map_adm3_density, echo = FALSE, message = FALSE, warning = FALSE}
+#| label: fig-density
+#| fig-cap: "Neighborhoods of Cap-Haitien according to their density and different types of sanitation systems in area arround Cap-Haitien"
 
 # basic example plot
 # neighborhoods of Cap-Haitien according to their density
@@ -78,7 +104,6 @@ cap_map <- cap_adm3 |>
   tm_shape() +
   tm_borders(lwd = 2) +
   tm_layout(bg.color = "lightblue") +
-  tm_borders() +
   tm_shape(cap_okap) +
   tm_borders() +
   tm_fill(col = "density", palette = "YlOrBr") +
@@ -91,6 +116,28 @@ tmap_mode("view")
 
 cap_map
 
+```
+
+```{r map_adm3_economy, echo = FALSE, message = FALSE, warning = FALSE}
+#| label: fig-economy
+#| fig-cap: "Neighborhoods of Cap-Haitien according to their econimy and different types of sanitation systems in area arround Cap-Haitien"
+
+# basic example plot
+# neighborhoods of Cap-Haitien according to their economy
+# different types of sanitation systems in area arround Cap-Haitien
+cap_adm3 |>
+  tm_shape() +
+  tm_borders(lwd = 2) +
+  tm_layout(bg.color = "lightblue") +
+  tm_shape(cap_okap) +
+  tm_borders() +
+  tm_fill(col = "economy", palette = "YlOrBr") +
+  tm_shape(cap_mwater) +
+  tm_dots(col = "Type", palette = "Blues")
+
+```
+
+```{r map_simple, echo = FALSE, message = FALSE, warning = FALSE}
 okap |>
   filter(cte == "ctecaphaitien") |>
   tm_shape() +
@@ -100,5 +147,4 @@ okap |>
   tm_scale_bar(breaks = c(0, 1, 2), text.size = 1) +
   tm_shape(mwater) +
   tm_dots(col = "Type", palette = "Blues")
-
 ```
