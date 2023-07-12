@@ -1,7 +1,11 @@
 ---
-title: "examples"
+title: "Examples"
 editor_options: 
   chunk_output_type: console
+execute:
+  echo: false
+  message: false
+  warning: false
 ---
 
 ```{r unknown_chunk, include = FALSE}
@@ -13,7 +17,7 @@ knitr::opts_chunk$set(
 
 ## Load Packages
 
-```{r setup, output = FALSE, message = FALSE, warning = FALSE}
+```{r setup, echo = TRUE, output = FALSE, message = FALSE, warning = FALSE}
 library(cbssuitabilityhaiti)
 library(tidyverse)
 library(here)
@@ -41,34 +45,30 @@ haiti_adm3 <- st_read(here::here("vignettes", "articles","haiti-adm3","HTI_adm3.
 
 ```
 
-## Show datasets
-
-```{r tibbles}
-as_tibble(okap)
-as_tibble(mwater)
-as_tibble(haiti_adm3)
-```
-
 ## Background
 
-Haiti is a small island state in the Caribbean sea. It has four administrative levels where the 3rd level is used to emphasize the data in this article. The 3rd administrative level contains `r nrow(haiti_adm3)` areas. For this article the extended area around Cap Haïtien and l'Acul-du-Nord has been explored as depicted in @fig-northern-area.
+Haiti is a island state in the Caribbean sea. It has four administrative levels where the 3rd level is used to emphasize the data through out this article. The 3rd administrative level contains `r nrow(haiti_adm3)` areas. For this article the extended area around Cap Haïtien and l'Acul-du-Nord has been explored as depicted in @fig-northern-area.
 
 ```{r fig-northern-area, echo=FALSE, message = FALSE, warning = FALSE}
-#| label: fig-northern-area
-#| fig-cap: "Map of the Haiti"
+#| label: #fig-northern-area
+#| fig-cap: "Map of Haiti showing the 3rd level administration areas that are being investigated (yellow)."
+#| fig-cap-location: bottom
 
 ### explore Cap-Haitien data
+# view(haiti_adm3)
 
 # explore Haiti adm3 area data
+
+tmap_mode("view")
 
 haiti_adm3 |> 
   tm_shape() +
   tmap_options(check.and.fix = TRUE) +
   tm_borders() +
-  tm_fill(col = "orange") +
+  tm_fill(col = "orange", alpha = 0.6) +
   tm_shape(filter(haiti_adm3, (ID_2 == 24 | ID_2 == 25) & ID_3 != 76 & ID_3 != 80)) +
   tm_borders() +
-  tm_fill(col = "yellow")
+  tm_fill(col = "yellow", alpha = 0.6)
 
 # find Cap-Haitien data
 # mwater |>
@@ -111,11 +111,6 @@ cap_map <- cap_adm3 |>
   tm_dots(col = "Type", palette = "Blues")
 
 cap_map
-
-tmap_mode("view")
-
-cap_map
-
 ```
 
 ```{r map_adm3_economy, echo = FALSE, message = FALSE, warning = FALSE}
@@ -134,17 +129,75 @@ cap_adm3 |>
   tm_fill(col = "economy", palette = "YlOrBr") +
   tm_shape(cap_mwater) +
   tm_dots(col = "Type", palette = "Blues")
-
 ```
 
-```{r map_simple, echo = FALSE, message = FALSE, warning = FALSE}
+```{r join_data, echo=FALSE, message=FALSE, warning=FALSE}
+joined_dataset <- st_join(mwater, okap) |> 
+  drop_na(neighborho)
+```
+
+```{r cap_join_density, echo = FALSE, message = FALSE, warning = FALSE}
 okap |>
-  filter(cte == "ctecaphaitien") |>
+  st_filter(joined_dataset) |> 
   tm_shape() +
-  tm_layout(bg.color = "lightblue") +
   tm_borders() +
-  tm_fill(col = "density", palette = "YlOrBr") +
-  tm_scale_bar(breaks = c(0, 1, 2), text.size = 1) +
-  tm_shape(mwater) +
+  tm_fill(col = "density", palette = "YlOrBr", alpha = 0.7) +
+  tm_shape(joined_dataset) +
   tm_dots(col = "Type", palette = "Blues")
+```
+
+```{r cap_join_economy, echo=FALSE, message=FALSE, warning=FALSE}
+okap |> 
+  st_filter(joined_dataset) |> 
+  tm_shape() +
+  tm_borders() +
+  tm_fill(col = "economy", palette = "YlOrBr", alpha = 0.7) +
+  tm_shape(joined_dataset) +
+  tm_dots(col = "Type", palette = "Blues")
+```
+
+```{r barplot_simple, echo=FALSE, message=FALSE, warning=FALSE}
+joined_dataset |> 
+  drop_na(qlty_water) |> 
+  st_drop_geometry() |> 
+  ggplot() +
+  geom_bar(aes(y = Type))
+```
+
+```{r barplot_density, echo=FALSE, message=FALSE, warning=FALSE}
+joined_dataset |> 
+  drop_na(qlty_water) |> 
+  st_drop_geometry() |> 
+  ggplot() +
+  geom_bar(aes(y = density, fill = economy), position = "fill") +
+  facet_wrap(~ Type, nrow = 5)
+```
+
+```{r barplot_economy, echo=FALSE, message=FALSE, warning=FALSE}
+joined_dataset |> 
+  drop_na(qlty_water) |> 
+  st_drop_geometry() |> 
+  ggplot() +
+  geom_bar(aes(y = Type, fill = density), position = "fill") +
+  facet_wrap(~ economy, nrow = 2)
+```
+
+## Used datasets
+
+### `okap`
+
+```{r tibble_okap}
+as_tibble(okap)
+```
+
+### `mwater`
+
+```{r tibble_mwater}
+as_tibble(mwater)
+```
+
+### Haiti 3rd level administrative areas `haiti_adm3`
+
+```{r tibble_adm3}
+as_tibble(haiti_adm3)
 ```

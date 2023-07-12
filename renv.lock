@@ -1486,6 +1486,23 @@
       "RemoteSha": "4c5d5ad663b7109d86b1c1365b9f23164e337107",
       "Hash": "864f02fcb0ee0c11a79a1f13ccdc7d59"
     },
+    "openxlsx": {
+      "Package": "openxlsx",
+      "Version": "4.2.5.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "Rcpp",
+        "grDevices",
+        "methods",
+        "stats",
+        "stringi",
+        "utils",
+        "zip"
+      ],
+      "Hash": "c03b4c18d42da881fb8e15a085c2b9d6"
+    },
     "pillar": {
       "Package": "pillar",
       "Version": "1.9.0",
