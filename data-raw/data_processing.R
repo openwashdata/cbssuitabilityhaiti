@@ -5,6 +5,7 @@
 # R packages --------------------------------------------------------------
 
 library(tidyverse)
+library(lubridate)
 library(here)
 library(sf)
 library(tmap)
@@ -44,8 +45,17 @@ okap <- okap |>
          aptitude = c("good", "medium", "bad")[match(aptitude, c("bonne", "moyenne", "mauvaise"))],
          zoning = str_replace_all(zoning, "regroupe", "group"),
          latrine = c("allowed", "not allowed")[match(latrine, c("fond perdu", "pas fond perdu"))]) |>
-  mutate(density = fct_reorder(density, density_ra, .na_rm = FALSE))
+  mutate(density = fct_reorder(density, density_ra, .na_rm = FALSE)) |>
+  select(-sector_id)
 
+mwater <- mwater |>
+  mutate(Date.added = mdy_hm(Date.added)) |>
+  rename("latitude" = Latitude.o,
+         "longitude" = Longitude,
+         "administra"= Administra,
+         "type" = Type,
+         "date_added" = Date.added,
+         "datasets" = Datasets..)
 
 # explore data ------------------------------------------------------------
 
@@ -79,7 +89,7 @@ okap
 
 usethis::use_data(mwater, okap, overwrite = TRUE)
 
-fs::dir_create(here::here("inst", "extdata"))
+# fs::dir_create(here::here("inst", "extdata"))
 
 write_csv(mwater, here::here("inst", "extdata", "mwater.csv"))
 write_csv(okap, here::here("inst", "extdata", "okap.csv"))

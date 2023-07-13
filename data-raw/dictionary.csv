@@ -2,7 +2,6 @@ directory,file_name,variable_name,variable_type,description
 data/,okap.rda,neighborho,double,Unique identifying number for each neighborhood unit
 data/,okap.rda,name,character,Name of each nieghborhood unit
 data/,okap.rda,sup_km2,double,Area of neighborhood in square km
-data/,okap.rda,sector_id,double,NULL
 data/,okap.rda,cte,character,Name of commune (administrative unit in Haiti)
 data/,okap.rda,qlty_water,double,Unknown
 data/,okap.rda,qty_water,double,Unknown
@@ -12,7 +11,7 @@ data/,okap.rda,transport,double,Unknown
 data/,okap.rda,economy,character,"Categorical socioeconomic status (low, medium)"
 data/,okap.rda,ranking,double,Unknown
 data/,okap.rda,sup_bati,double,area of neihborhood covered by buildings in square meters
-data/,okap.rda,density,character,"Categorical population density (least dense, somewhat dense, dense, very dense, most dense)"
+data/,okap.rda,density,integer,"Categorical population density (least dense, somewhat dense, dense, very dense, most dense)"
 data/,okap.rda,aptitude,character,suitability of the site for a wastewater treatment system
 data/,okap.rda,zoning,character,"""group"" if collective or grouped sanitation is possible in short term."
 data/,okap.rda,latrine,character,"Suggested pit latrine and septic allowance (allowed, not allowed)"
@@ -20,10 +19,10 @@ data/,okap.rda,standing,character,Unknown
 data/,okap.rda,density_ra,double,"Catgoriccal population density according to the description of the variable ""density"" (values from 1 to 5)"
 data/,okap.rda,economy_nu,double,"Categotical socioeconomic status according to the description of the variable ""economy"" (1=low, 2 = medium)"
 data/,okap.rda,geometry,list,Geospatial data of the neighborhood stored as a polygon
-data/,mwater.rda,Latitude.o,double,Lattitude coordinate
-data/,mwater.rda,Longitude,double,Longitude coordinate
-data/,mwater.rda,Administra,character,Communal section- smallest administrative unit in Haiti
-data/,mwater.rda,Type,character,Type of water access point
-data/,mwater.rda,Date.added,character,Date water access point was added to mWater
-data/,mwater.rda,Datasets..,character,"Dataset in mWater that point is part of, including organizaiton that is responsible for data"
+data/,mwater.rda,latitude,double,Lattitude coordinate
+data/,mwater.rda,longitude,double,Longitude coordinate
+data/,mwater.rda,administra,character,Communal section- smallest administrative unit in Haiti
+data/,mwater.rda,type,character,Type of water access point
+data/,mwater.rda,date_added,double,Date water access point was added to mWater
+data/,mwater.rda,datasets,character,"Dataset in mWater that point is part of, including organizaiton that is responsible for data"
 data/,mwater.rda,geometry,list,Geospatial data of the different access points that were added to mWater
