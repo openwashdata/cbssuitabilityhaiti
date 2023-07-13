@@ -89,10 +89,7 @@ The package provides access one data set.
 library(cbssuitabilityhaiti)
 ```
 
-```{epoxy}
-The `mwater` data set has {ncol(mwater)} variables and {nrow(mwater)} observations. For an overview of the variable names, see the following table.  
-
-```
+The `mwater` data set has `r ncol(mwater)` variables and `r nrow(mwater)` observations. For an overview of the variable names, see the following table.  
 
 ```{r, eval=FALSE}
 mwater
@@ -134,10 +131,7 @@ The package provides access one data set.
 library(cbssuitabilityhaiti)
 ```
 
-```{epoxy}
-The `okap` data set has {ncol(okap)} variables and {nrow(okap)} observations. For an overview of the variable names, see the following table.  
-
-```
+The `okap` data set has `r ncol(okap)` variables and `r nrow(okap)` observations. For an overview of the variable names, see the following table.  
 
 ```{r, eval=FALSE}
 okap
@@ -160,7 +154,7 @@ qtm(okap)
 
 This is a basic example which shows you how to use the data:
 
-```{r example}
+```{r example, eval=FALSE}
 library(cbssuitabilityhaiti)
 ## basic example code
 ```

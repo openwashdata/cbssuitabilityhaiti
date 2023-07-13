@@ -36,8 +36,8 @@ update_dictionary <- function(dictionary_path) {
 
 # TODO
 # Add documentation from data dictionary to script as roxygen
-openwashdata::generate_roxygen_docs("data-raw/dictionary.csv", output_file_path = "R/okap.R")
-# openwashdata::generate_roxygen_docs("data-raw/dictionary.csv", output_file_path = "R/mwater.R")
+# openwashdata::generate_roxygen_docs("data-raw/dictionary.csv", output_file_path = "R/okap_a.R")
+# openwashdata::generate_roxygen_docs("data-raw/dictionary.csv", output_file_path = "R/mwater-a.R")
 
 # DONE
 # # Add an additional package documentation to Package
@@ -167,7 +167,7 @@ devtools::install()   # "Cmd + Shift + B"
 
 # DONE
 # Create a rmd README for package
-usethis::use_readme_rmd()
+# usethis::use_readme_rmd()
 
 # DONE
 # Create an examples article for the package
