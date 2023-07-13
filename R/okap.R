@@ -9,7 +9,6 @@
 #'   \item{neighborho}{Unique identifying number for each neighborhood unit}
 #'   \item{name}{Name of each nieghborhood unit}
 #'   \item{sup_km2}{Area of neighborhood in square km}
-#'   \item{sector_id}{NULL}
 #'   \item{cte}{Name of commune (administrative unit in Haiti)}
 #'   \item{qlty_water}{Unknown}
 #'   \item{qty_water}{Unknown}
