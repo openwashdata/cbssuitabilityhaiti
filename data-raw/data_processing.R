@@ -46,6 +46,7 @@ okap <- okap |>
          zoning = str_replace_all(zoning, "regroupe", "group"),
          latrine = c("allowed", "not allowed")[match(latrine, c("fond perdu", "pas fond perdu"))]) |>
   mutate(density = fct_reorder(density, density_ra, .na_rm = FALSE)) |>
+  rename("sup_bati_km2" = sup_bati)
   select(-sector_id)
 
 mwater <- mwater |>

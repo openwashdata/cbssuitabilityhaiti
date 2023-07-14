@@ -10,7 +10,7 @@ data/,okap.rda,schooling,double,Unknown
 data/,okap.rda,transport,double,Unknown
 data/,okap.rda,economy,character,"Categorical socioeconomic status (low, medium)"
 data/,okap.rda,ranking,double,Unknown
-data/,okap.rda,sup_bati,double,area of neihborhood covered by buildings in square meters
+data/,okap.rda,sup_bati_km2,double,area of neihborhood covered by buildings in square kilometers
 data/,okap.rda,density,integer,"Categorical population density (least dense, somewhat dense, dense, very dense, most dense)"
 data/,okap.rda,aptitude,character,suitability of the site for a wastewater treatment system
 data/,okap.rda,zoning,character,"""group"" if collective or grouped sanitation is possible in short term."

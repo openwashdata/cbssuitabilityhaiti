@@ -51,7 +51,6 @@ update_dictionary <- function(dictionary_path) {
 # Add dependencies in DESCRIPTION file
 # use_package("tidyverse")
 use_package("tmap","Suggests")
-use_package("here","Suggests")
 
 # TODO
 # Add authors information

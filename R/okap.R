@@ -17,7 +17,7 @@
 #'   \item{transport}{Unknown}
 #'   \item{economy}{Categorical socioeconomic status (low, medium)}
 #'   \item{ranking}{Unknown}
-#'   \item{sup_bati}{area of neihborhood covered by buildings in square meters}
+#'   \item{sup_bati_km2}{area of neihborhood covered by buildings in square kilometers}
 #'   \item{density}{Categorical population density (least dense, somewhat dense, dense, very dense, most dense)}
 #'   \item{aptitude}{suitability of the site for a wastewater treatment system}
 #'   \item{zoning}{"group" if collective or grouped sanitation is possible in short term.}
