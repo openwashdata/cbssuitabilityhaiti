@@ -3,19 +3,12 @@ data/,okap.rda,neighborho,double,Unique identifying number for each neighborhood
 data/,okap.rda,name,character,Name of each nieghborhood unit
 data/,okap.rda,sup_km2,double,Area of neighborhood in square km
 data/,okap.rda,cte,character,Name of commune (administrative unit in Haiti)
-data/,okap.rda,qlty_water,double,Unknown
-data/,okap.rda,qty_water,double,Unknown
-data/,okap.rda,health_car,double,Unknown
-data/,okap.rda,schooling,double,Unknown
-data/,okap.rda,transport,double,Unknown
 data/,okap.rda,economy,character,"Categorical socioeconomic status (low, medium)"
-data/,okap.rda,ranking,double,Unknown
 data/,okap.rda,sup_bati_km2,double,area of neihborhood covered by buildings in square kilometers
 data/,okap.rda,density,integer,"Categorical population density (least dense, somewhat dense, dense, very dense, most dense)"
 data/,okap.rda,aptitude,character,suitability of the site for a wastewater treatment system
 data/,okap.rda,zoning,character,"""group"" if collective or grouped sanitation is possible in short term."
 data/,okap.rda,latrine,character,"Suggested pit latrine and septic allowance (allowed, not allowed)"
-data/,okap.rda,standing,character,Unknown
 data/,okap.rda,density_ra,double,"Catgoriccal population density according to the description of the variable ""density"" (values from 1 to 5)"
 data/,okap.rda,economy_nu,double,"Categotical socioeconomic status according to the description of the variable ""economy"" (1=low, 2 = medium)"
 data/,okap.rda,geometry,list,Geospatial data of the neighborhood stored as a polygon
