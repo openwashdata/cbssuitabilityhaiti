@@ -24,16 +24,37 @@ okap <- st_read("data-raw/Okap_Zonaj_Asenisman_USAID/Okap_Zonaj_Asenisman_USAID.
 # wb <- st_read("data-raw/world_bank_flood_extents_caphaitien/100yr_Flood_Extent.shp") |>
 #   st_as_sf()
 
-# tidy data ---------------------------------------------------------------
+
+# explore raw data ------------------------------------------------------------
 
 okap |>
   glimpse()
 
-okap |>
-  janitor::tabyl(economy)
+## explore unknown variables
+# Create an empty list to store tabulations
+tabulation_list <- list()
+# Loop through variables 6 to 12
+for (var in c(6:12)) {
+  tabulation <- tabyl(okap, colnames(okap)[var])
+  tabulation_list[[colnames(okap)[var]]] <- tabulation
+}
+# Loop through variables 6 to 12
+for (var_name in names(tabulation_list)) {
+  print(paste("Tabulation for", var_name, ":"))
+  print(tabulation_list[[var_name]])
+}
 
-okap |>
-  tabyl(ranking)
+## explore Cap Haitien area and unknown variables
+tmap_mode("plot")
+tm_shape(okap_cap) +
+  tm_fill(c("qlty_water", "qty_water", "health_car", "schooling", "transport", "ranking"),
+          palette = "YlOrBr",
+          alpha = 0.7) +
+  tm_borders()
+
+# tidy data ---------------------------------------------------------------
+
+
 
 # translate content to English
 okap_fr <- okap
@@ -46,8 +67,14 @@ okap <- okap |>
          zoning = str_replace_all(zoning, "regroupe", "group"),
          latrine = c("allowed", "not allowed")[match(latrine, c("fond perdu", "pas fond perdu"))]) |>
   mutate(density = fct_reorder(density, density_ra, .na_rm = FALSE)) |>
-  rename("sup_bati_km2" = sup_bati)
-  select(-sector_id)
+  rename("sup_bati_km2" = sup_bati) |>
+  select(-c(sector_id, standing, ))
+
+okap_cap <- okap |>
+  filter(cte == "ctecaphaitien")
+
+okap <- okap |>
+  select(-c(qlty_water:transport, ranking))
 
 mwater <- mwater |>
   mutate(Date.added = mdy_hm(Date.added)) |>
@@ -58,7 +85,7 @@ mwater <- mwater |>
          "date_added" = Date.added,
          "datasets" = Datasets..)
 
-# explore data ------------------------------------------------------------
+# explore tidy data ------------------------------------------------------------
 
 # explore mwater
 
@@ -77,9 +104,7 @@ okap |>
   glimpse()
 okap |>
   qtm()
-tm_shape(okap) +
-  tm_borders()
-# convert sf into tibble
+# show okap as tibble
 okap |>
   sf::st_drop_geometry() |>
   as_tibble()
