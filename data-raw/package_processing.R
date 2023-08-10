@@ -6,8 +6,9 @@ library(openwashdata)
 library(desc)
 
 
+# update dictionary -------------------------------------------------------
 
-# TODO
+# DONE
 # Create and update dictionary
 # function that conversts dictionary as xlsx to csv for later use in roxygen
 update_dictionary <- function(dictionary_path) {
@@ -18,7 +19,7 @@ update_dictionary <- function(dictionary_path) {
     readr::write_csv("data-raw/dictionary.csv")
 }
 
-# TODO
+# DONE
 # update_dictionary("data-raw/dictionary.xlsx")
 
 # Add documentation -------------------------------------------------------
@@ -34,10 +35,13 @@ update_dictionary <- function(dictionary_path) {
 # usethis::use_r("mwater")
 # usethis::use_r("okap")
 
-# TODO
+# DONE
 # Add documentation from data dictionary to script as roxygen
-# openwashdata::generate_roxygen_docs("data-raw/dictionary.csv", output_file_path = "R/okap_a.R")
-# openwashdata::generate_roxygen_docs("data-raw/dictionary.csv", output_file_path = "R/mwater-a.R")
+# openwashdata::generate_roxygen_docs("data-raw/dictionary.csv", output_file_path = "R/okap.R")
+# openwashdata::generate_roxygen_docs("data-raw/dictionary.csv", output_file_path = "R/mwater.R")
+
+# TODO
+# Add data description to DATASET.R files
 
 # DONE
 # # Add an additional package documentation to Package
@@ -157,6 +161,12 @@ use_authors_from_csv(f = "data-raw/authors.csv")
 use_authors_from_csv_replace(f = "data-raw/authors.csv")
 # Add CITATION.cff file
 cffr::cff_write()
+
+# DONE
+# Add citation statement to .R-files
+
+# DONE
+# Include Citation statements to the end of the README.Rmd/Readme.md file
 
 # load, document, check, and install
 devtools::load_all()  # "Cmd + Shift + L"

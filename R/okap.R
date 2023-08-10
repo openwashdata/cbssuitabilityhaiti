@@ -1,8 +1,8 @@
-#' Categorized data for neighborhoods in Haiti
+#' Sanitation zoning assessment data
 #'
-#' Description
-#' Description
-#' Description
+#' This data includes data from a sanitation zoning report done for the city
+#' of Cap Haitien, Haiti in 2022. Additionally, it contains spatial data about
+#' the neighborhoods of 5 different Haitien cities.
 #'
 #' @format A tibble with 198 rows and 21 variables:
 #' \describe{
@@ -20,5 +20,5 @@
 #'   \item{economy_nu}{Categotical socioeconomic status according to the description of the variable "economy" (1=low, 2 = medium)}
 #'   \item{geometry}{Geospatial data of the neighborhood stored as a polygon}
 #' }
-#'
+#' @source {These data were developed under the USAID Water and Sanitation Project in collaboration with the Cap-Haitian municipal government and DINEPA. These data do not reflect the opinion of USAID or the US Government.}
 "okap"

@@ -46,15 +46,16 @@ for (var_name in names(tabulation_list)) {
 
 ## explore Cap Haitien area and unknown variables
 tmap_mode("plot")
-tm_shape(okap_cap) +
+okap |>
+  filter(cte == "ctecaphaitien") |>
+  tm_shape() +
   tm_fill(c("qlty_water", "qty_water", "health_car", "schooling", "transport", "ranking"),
           palette = "YlOrBr",
           alpha = 0.7) +
   tm_borders()
+# no pattern visible...
 
 # tidy data ---------------------------------------------------------------
-
-
 
 # translate content to English
 okap_fr <- okap
@@ -70,9 +71,7 @@ okap <- okap |>
   rename("sup_bati_km2" = sup_bati) |>
   select(-c(sector_id, standing, ))
 
-okap_cap <- okap |>
-  filter(cte == "ctecaphaitien")
-
+# select only variable that are known
 okap <- okap |>
   select(-c(qlty_water:transport, ranking))
 
@@ -90,13 +89,13 @@ mwater <- mwater |>
 # explore mwater
 
 mwater |>
-  count(Datasets..)
+  count(datasets)
 mwater |>
   qtm()
 tm_shape(mwater) +
-  tm_dots(col = "Type")
+  tm_dots(col = "type")
 mwater |>
-  tabyl(Administra)
+  tabyl(administra)
 
 # explore okap
 
@@ -111,9 +110,12 @@ okap |>
 okap
 
 
-## code to prepare `DATASET` dataset goes here
+# save package data -------------------------------------------------------
 
+# code to prepare `DATASET` dataset goes here
 usethis::use_data(mwater, okap, overwrite = TRUE)
+
+# prepare dataset export files --------------------------------------------
 
 # fs::dir_create(here::here("inst", "extdata"))
 
@@ -124,8 +126,6 @@ openxlsx::write.xlsx(sf::st_drop_geometry(mwater), here::here("inst", "extdata",
 openxlsx::write.xlsx(sf::st_drop_geometry(okap), here::here("inst", "extdata", "okap.xlsx"))
 
 # prepare dictionaries ----------------------------------------------------
-
-library(tibble)
 
 get_variable_info <- function(data, directory = "", file_name = "") {
   total_variables <- sum(sapply(data, function(df) length(names(df))))

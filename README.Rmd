@@ -158,3 +158,26 @@ This is a basic example which shows you how to use the data:
 library(cbssuitabilityhaiti)
 ## basic example code
 ```
+
+## License
+
+Data are available as
+[CC-BY](https://github.com/openwashdata/cbssuitability/blob/main/LICENSE.md).
+
+## Citation
+
+Please cite using:
+
+```{r}
+citation("cbssuitabilityhaiti")
+```
+
+## Additional data use information
+
+Anyone interested in publishing the data:
+
+- World Bank flood extent data (`mwater`) should be attributed with "Plan d’Élaboration propre basée sur les données de la Banque Mondiale: Inondation de Récurrence (5 ans / 25 ans / 100 ans)"
+
+- Sanitation zoning assessment data (`okap`) should be attributed with "These data were developed under the USAID Water and Sanitation Project in collaboration with the Cap-Haitian municipal government and DINEPA. These data do not reflect the opinion of USAID or the US Government."
+
+
