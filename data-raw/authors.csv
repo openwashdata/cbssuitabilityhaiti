@@ -1,3 +1,4 @@
 first_name,last_name,email,role,orcid
-Sebastian Camilo,Loos,seba.loos@hotmail.com,cre,0000-0002-8830-1734
-Max,Power,email@email.com,aut,0000-0002-8830-1734
+Sebastian Camilo,Loos,seba.loos@hotmail.com,"cre, aut",0000-0002-8830-1734
+Maya,Lubeck-Schricker,mlubeck-schricker@oursoil.org,aut,NA
+Sasha,Kramer,skramer@oursoil.org,aut,NA

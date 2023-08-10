@@ -154,7 +154,7 @@ use_authors_from_csv_replace <- function(f = "raw-data/authors.csv", quiet = FAL
   }
 }
 
-# TODO
+# TODO (orcid-ids...)
 # Update Authors csv
 update_authors_csv("data-raw/authors.xlsx")
 use_authors_from_csv(f = "data-raw/authors.csv")

@@ -13,7 +13,8 @@ What the package does (one paragraph).
 
 Authors:
 \itemize{
-  \item Max Power \email{email@email.com} (0000-0002-8830-1734)
+  \item Maya Lubeck-Schricker \email{mlubeck-schricker@oursoil.org}
+  \item Sasha Kramer \email{skramer@oursoil.org}
 }
 
 }
