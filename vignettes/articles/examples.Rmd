@@ -158,15 +158,13 @@ okap |>
 
 ```{r barplot_simple, echo=FALSE, message=FALSE, warning=FALSE}
 joined_dataset |> 
-  drop_na(qlty_water) |> 
   st_drop_geometry() |> 
   ggplot() +
   geom_bar(aes(y = type))
 ```
 
 ```{r barplot_density, echo=FALSE, message=FALSE, warning=FALSE}
-joined_dataset |> 
-  drop_na(qlty_water) |> 
+joined_dataset |>
   st_drop_geometry() |> 
   ggplot() +
   geom_bar(aes(y = density, fill = economy), position = "fill") +
@@ -175,7 +173,6 @@ joined_dataset |>
 
 ```{r barplot_economy, echo=FALSE, message=FALSE, warning=FALSE}
 joined_dataset |> 
-  drop_na(qlty_water) |> 
   st_drop_geometry() |> 
   ggplot() +
   geom_bar(aes(y = type, fill = density), position = "fill") +

@@ -202,7 +202,7 @@
 <p>The package provides access one data set.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">cbssuitabilityhaiti</span><span class="op">)</span></span></code></pre></div>
-<p>The <code>okap</code> data set has 20 variables and 198 observations. For an overview of the variable names, see the following table.</p>
+<p>The <code>okap</code> data set has 13 variables and 198 observations. For an overview of the variable names, see the following table.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">okap</span></span></code></pre></div>
 <table class="table">
@@ -238,44 +238,14 @@
 <td align="left">Name of commune (administrative unit in Haiti)</td>
 </tr>
 <tr class="odd">
-<td align="left">qlty_water</td>
-<td align="left">double</td>
-<td align="left">Unknown</td>
-</tr>
-<tr class="even">
-<td align="left">qty_water</td>
-<td align="left">double</td>
-<td align="left">Unknown</td>
-</tr>
-<tr class="odd">
-<td align="left">health_car</td>
-<td align="left">double</td>
-<td align="left">Unknown</td>
-</tr>
-<tr class="even">
-<td align="left">schooling</td>
-<td align="left">double</td>
-<td align="left">Unknown</td>
-</tr>
-<tr class="odd">
-<td align="left">transport</td>
-<td align="left">double</td>
-<td align="left">Unknown</td>
-</tr>
-<tr class="even">
 <td align="left">economy</td>
 <td align="left">character</td>
 <td align="left">Categorical socioeconomic status (low, medium)</td>
 </tr>
-<tr class="odd">
-<td align="left">ranking</td>
-<td align="left">double</td>
-<td align="left">Unknown</td>
-</tr>
 <tr class="even">
-<td align="left">sup_bati</td>
+<td align="left">sup_bati_km2</td>
 <td align="left">double</td>
-<td align="left">area of neihborhood covered by buildings in square meters</td>
+<td align="left">area of neihborhood covered by buildings in square kilometers</td>
 </tr>
 <tr class="odd">
 <td align="left">density</td>
@@ -298,21 +268,16 @@
 <td align="left">Suggested pit latrine and septic allowance (allowed, not allowed)</td>
 </tr>
 <tr class="odd">
-<td align="left">standing</td>
-<td align="left">character</td>
-<td align="left">Unknown</td>
-</tr>
-<tr class="even">
 <td align="left">density_ra</td>
 <td align="left">double</td>
 <td align="left">Catgoriccal population density according to the description of the variable “density” (values from 1 to 5)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">economy_nu</td>
 <td align="left">double</td>
 <td align="left">Categotical socioeconomic status according to the description of the variable “economy” (1=low, 2 = medium)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">geometry</td>
 <td align="left">list</td>
 <td align="left">Geospatial data of the neighborhood stored as a polygon</td>
@@ -330,6 +295,42 @@
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">cbssuitabilityhaiti</span><span class="op">)</span></span>
 <span><span class="co">## basic example code</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
+</h2>
+<p>Data are available as <a href="https://github.com/openwashdata/cbssuitability/blob/main/LICENSE.md" class="external-link">CC-BY</a>.</p>
+</div>
+<div class="section level2">
+<h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
+</h2>
+<p>Please cite using:</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"cbssuitabilityhaiti"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Um Paket 'cbssuitabilityhaiti' in Publikationen zu zitieren, nutzen Sie</span></span>
+<span><span class="co">#&gt; bitte:</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   Loos S, Lubeck-Schricker M, Kramer S (2023). _cbssuitabilityhaiti:</span></span>
+<span><span class="co">#&gt;   The Package contains data from the Soil projects in Haiti_. R package</span></span>
+<span><span class="co">#&gt;   version 0.0.0.9000.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Ein BibTeX-Eintrag für LaTeX-Benutzer ist</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   @Manual{,</span></span>
+<span><span class="co">#&gt;     title = {cbssuitabilityhaiti: The Package contains data from the Soil projects in Haiti},</span></span>
+<span><span class="co">#&gt;     author = {Sebastian Camilo Loos and Maya Lubeck-Schricker and Sasha Kramer},</span></span>
+<span><span class="co">#&gt;     year = {2023},</span></span>
+<span><span class="co">#&gt;     note = {R package version 0.0.0.9000},</span></span>
+<span><span class="co">#&gt;   }</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="additional-data-use-information">Additional data use information<a class="anchor" aria-label="anchor" href="#additional-data-use-information"></a>
+</h2>
+<p>Anyone interested in publishing the data:</p>
+<ul>
+<li><p>World Bank flood extent data (<code>mwater</code>) should be attributed with “Plan d’Élaboration propre basée sur les données de la Banque Mondiale: Inondation de Récurrence (5 ans / 25 ans / 100 ans)”</p></li>
+<li><p>Sanitation zoning assessment data (<code>okap</code>) should be attributed with “These data were developed under the USAID Water and Sanitation Project in collaboration with the Cap-Haitian municipal government and DINEPA. These data do not reflect the opinion of USAID or the US Government.”</p></li>
+</ul>
 </div>
 </div>
 
@@ -351,8 +352,9 @@
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>So <em>who</em> does the work?</li>
-<li>Sebastian Camilo Loos <br><small class="roles"> Maintainer </small>  </li>
-<li>Max Power <br><small class="roles"> Author </small>  </li>
+<li>Sebastian Camilo Loos <br><small class="roles"> Author, maintainer </small>  </li>
+<li>Maya Lubeck-Schricker <br><small class="roles"> Author </small>  </li>
+<li>Sasha Kramer <br><small class="roles"> Author </small>  </li>
 <li>Thanks all!</li>
 <li><a href="authors.html">More about authors...</a></li>
 </ul>
