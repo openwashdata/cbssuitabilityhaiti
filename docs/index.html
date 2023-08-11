@@ -60,13 +60,12 @@
 <div class="page-header"><h1 id="cbssuitabilityhaiti">cbssuitabilityhaiti<a class="anchor" aria-label="anchor" href="#cbssuitabilityhaiti"></a>
 </h1></div>
 <!-- badges: start -->
-<p>DOI R-CMD-Check</p>
+
 <!-- badges: end -->
-</div>
-<div class="section level1">
-<h1 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
-</h1>
-<p>This packages combines data collected as part of ?????? conducted in Haiti. The projects were supported by SOIL at ??????.</p>
+<p>The goal of <code>cbssuitabiility</code> is to provide datasets for research and planning of water and solid waste management in Cap Haïtien, Haiti. This package combines datasets collected as part of two different projects. The package includes geospatial data about the locations of water access points and data from a sanitation zoning report for the municipality of Cap Haïtien.</p>
+<table class="table"><tbody><tr class="odd">
+<td align="left">DATA VISUALIZATION</td>
+</tr></tbody></table>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -105,7 +104,7 @@
 <h1 id="projects">Projects<a class="anchor" aria-label="anchor" href="#projects"></a>
 </h1>
 <div class="section level2">
-<h2 id="mwater">mWater<a class="anchor" aria-label="anchor" href="#mwater"></a>
+<h2 id="case-study-mwater-in-haiti">Case Study: mWater in Haiti<a class="anchor" aria-label="anchor" href="#case-study-mwater-in-haiti"></a>
 </h2>
 <p>(One sentence) Evaluating the potential of ……..</p>
 <div class="section level3">
@@ -122,7 +121,7 @@
 <h3 id="data">Data<a class="anchor" aria-label="anchor" href="#data"></a>
 </h3>
 <p>Description of the Data. When/Where it was collected. For how long.</p>
-<p>The package provides access one data set.</p>
+<p>The package provides access to one data set.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">cbssuitabilityhaiti</span><span class="op">)</span></span></code></pre></div>
 <p>The <code>mwater</code> data set has 7 variables and 1849 observations. For an overview of the variable names, see the following table.</p>
@@ -178,28 +177,32 @@
 </tbody>
 </table>
 <p>A small visualisation of this data set</p>
-<p><img src="reference/figures/README-unnamed-chunk-6-1.png" width="100%"></p>
+<div class="figure" style="text-align: center">
+<img src="reference/figures/README-fig-water-access-points-1.png" alt="Locations of water access points in this dataset" width="100%"><p class="caption">
+Locations of water access points in this dataset
+</p>
+</div>
+<div class="section level4">
+<h4 id="source">Source?<a class="anchor" aria-label="anchor" href="#source"></a>
+</h4>
+<p><a href="https://www.mwater.co/projects/haiti" class="external-link uri">https://www.mwater.co/projects/haiti</a></p>
+</div>
 </div>
 </div>
 <div class="section level2">
-<h2 id="okap">Okap<a class="anchor" aria-label="anchor" href="#okap"></a>
+<h2 id="projet-eau-et-assainissement-de-lusaid">Projet Eau et Assainissement de l’USAID<a class="anchor" aria-label="anchor" href="#projet-eau-et-assainissement-de-lusaid"></a>
 </h2>
-<p>(One sentence) Evaluating the potential of ……..</p>
+<p>Sanitation zoning assessment for the Cap Haïtien, Haiti region.</p>
 <div class="section level3">
 <h3 id="description-1">Description<a class="anchor" aria-label="anchor" href="#description-1"></a>
 </h3>
-<p>(One to two short paragraphs) This Project focuses on determining …….</p>
-</div>
-<div class="section level3">
-<h3 id="research-question-1">Research Question<a class="anchor" aria-label="anchor" href="#research-question-1"></a>
-</h3>
-<p>(One to two questions)</p>
+<p>The study, based on three basic criteria (physical, urban characteristics and socioeconomic constraints of the zones), divides the Cap-Haïtien metropolitan area into homogeneous zones in order to propose adapted sanitation solutions for each zone based on a set of predefined criteria.</p>
 </div>
 <div class="section level3">
 <h3 id="data-1">Data<a class="anchor" aria-label="anchor" href="#data-1"></a>
 </h3>
-<p>Description of the Data. When/Where it was collected. For how long.</p>
-<p>The package provides access one data set.</p>
+<p>This data includes data from a sanitation zoning report done for the city of Cap Haïtien, Haiti in 2022. Additionally, it contains spatial data about the neighborhoods of 5 different Haïtien cities. The attribute table includes data on population density, socioeconomic status, suitability of pit latrines, and suggested sewage construction priority zones.</p>
+<p>These data were developed under the USAID Water and Sanitation Project in collaboration with the Cap-Haitian municipal government and DINEPA. These data do not reflect the opinion of USAID or the US Government.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">cbssuitabilityhaiti</span><span class="op">)</span></span></code></pre></div>
 <p>The <code>okap</code> data set has 13 variables and 198 observations. For an overview of the variable names, see the following table.</p>
@@ -284,8 +287,12 @@
 </tr>
 </tbody>
 </table>
-<p>A small visualisation of this data set</p>
-<p><img src="reference/figures/README-unnamed-chunk-10-1.png" width="100%"></p>
+<p><img src="reference/figures/README-unnamed-chunk-10-1.png" width="100%" style="display: block; margin: auto;"></p>
+<div class="section level4">
+<h4 id="source-1">Source?<a class="anchor" aria-label="anchor" href="#source-1"></a>
+</h4>
+<p><a href="https://data.humdata.org/dataset/cap-haitien-haiti-sanitation-zoning-assessment" class="external-link uri">https://data.humdata.org/dataset/cap-haitien-haiti-sanitation-zoning-assessment</a></p>
+</div>
 </div>
 </div>
 <div class="section level2">
@@ -294,7 +301,28 @@
 <p>This is a basic example which shows you how to use the data:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">cbssuitabilityhaiti</span><span class="op">)</span></span>
-<span><span class="co">## basic example code</span></span></code></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-tmap/tmap" class="external-link">tmap</a></span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">## create an interactive map for cap haitien</span></span>
+<span></span>
+<span><span class="co"># set mapping mode to interactive ("view")</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tmap_mode.html" class="external-link">tmap_mode</a></span><span class="op">(</span><span class="st">"view"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># create first map layer: neighborhood areas</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tm_shape.html" class="external-link">tm_shape</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">okap</span>, <span class="va">cte</span> <span class="op">==</span> <span class="st">"ctecaphaitien"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tm_polygons.html" class="external-link">tm_borders</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tm_polygons.html" class="external-link">tm_fill</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># create second map layer: locations and type of the water points</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tm_shape.html" class="external-link">tm_shape</a></span><span class="op">(</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/drop_na.html" class="external-link">drop_na</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_join.html" class="external-link">st_join</a></span><span class="op">(</span><span class="va">mwater</span>, <span class="va">okap</span><span class="op">)</span>, <span class="va">neighborho</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/tmap/man/tm_symbols.html" class="external-link">tm_dots</a></span><span class="op">(</span>col <span class="op">=</span> <span class="st">"type"</span>, palette <span class="op">=</span> <span class="st">"PuRd"</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<img src="reference/figures/screenshot-map-water-access-cap-haitien.png" alt="Screenshot of the an interactive map with OpenStreetMap layer." width="100%"><p class="caption">
+Screenshot of the an interactive map with OpenStreetMap layer.
+</p>
+</div>
 </div>
 <div class="section level2">
 <h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
@@ -310,7 +338,7 @@
 <span><span class="co">#&gt; Um Paket 'cbssuitabilityhaiti' in Publikationen zu zitieren, nutzen Sie</span></span>
 <span><span class="co">#&gt; bitte:</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;   Loos S, Lubeck-Schricker M, Kramer S (????). _cbssuitabilityhaiti:</span></span>
+<span><span class="co">#&gt;   Loos S, Lubeck-Schricker M, Kramer S (2023). _cbssuitabilityhaiti:</span></span>
 <span><span class="co">#&gt;   The Package contains data from the Soil projects in Haiti_. R package</span></span>
 <span><span class="co">#&gt;   version 0.0.0.9000.</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -319,6 +347,7 @@
 <span><span class="co">#&gt;   @Manual{,</span></span>
 <span><span class="co">#&gt;     title = {cbssuitabilityhaiti: The Package contains data from the Soil projects in Haiti},</span></span>
 <span><span class="co">#&gt;     author = {Sebastian Camilo Loos and Maya Lubeck-Schricker and Sasha Kramer},</span></span>
+<span><span class="co">#&gt;     year = {2023},</span></span>
 <span><span class="co">#&gt;     note = {R package version 0.0.0.9000},</span></span>
 <span><span class="co">#&gt;   }</span></span></code></pre></div>
 </div>
@@ -359,7 +388,13 @@
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="ZENODO_DOI_URL"><img src="ZENODO_DOI_URL.svg" alt="DOI"></a></li>
+<li><a href="https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml"><img src="https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+</ul>
+</div>
 
 <div class="funding">
 <h2 data-toc-skip>Funding</h2>

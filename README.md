@@ -5,14 +5,21 @@
 
 <!-- badges: start -->
 
-DOI R-CMD-Check
+[![DOI](ZENODO_DOI_URL.svg)](ZENODO_DOI_URL)
+[![R-CMD-check](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml)
 
 <!-- badges: end -->
 
-# Overview
+The goal of `cbssuitabiility` is to provide datasets for research and
+planning of water and solid waste management in Cap Haïtien, Haiti. This
+package combines datasets collected as part of two different projects.
+The package includes geospatial data about the locations of water access
+points and data from a sanitation zoning report for the municipality of
+Cap Haïtien.
 
-This packages combines data collected as part of ?????? conducted in
-Haiti. The projects were supported by SOIL at ??????.
+|                    |
+|:-------------------|
+| DATA VISUALIZATION |
 
 ## Installation
 
@@ -34,7 +41,7 @@ file from the table below.
 
 # Projects
 
-## mWater
+## Case Study: mWater in Haiti
 
 (One sentence) Evaluating the potential of ……..
 
@@ -50,7 +57,7 @@ file from the table below.
 
 Description of the Data. When/Where it was collected. For how long.
 
-The package provides access one data set.
+The package provides access to one data set.
 
 ``` r
 library(cbssuitabilityhaiti)
@@ -75,25 +82,43 @@ mwater
 
 A small visualisation of this data set
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
+<div class="figure" style="text-align: center">
 
-## Okap
+<img src="man/figures/README-fig-water-access-points-1.png" alt="Locations of water access points in this dataset" width="100%" />
+<p class="caption">
+Locations of water access points in this dataset
+</p>
 
-(One sentence) Evaluating the potential of ……..
+</div>
+
+#### Source?
+
+<https://www.mwater.co/projects/haiti>
+
+## Projet Eau et Assainissement de l’USAID
+
+Sanitation zoning assessment for the Cap Haïtien, Haiti region.
 
 ### Description
 
-(One to two short paragraphs) This Project focuses on determining …….
-
-### Research Question
-
-(One to two questions)
+The study, based on three basic criteria (physical, urban
+characteristics and socioeconomic constraints of the zones), divides the
+Cap-Haïtien metropolitan area into homogeneous zones in order to propose
+adapted sanitation solutions for each zone based on a set of predefined
+criteria.
 
 ### Data
 
-Description of the Data. When/Where it was collected. For how long.
+This data includes data from a sanitation zoning report done for the
+city of Cap Haïtien, Haiti in 2022. Additionally, it contains spatial
+data about the neighborhoods of 5 different Haïtien cities. The
+attribute table includes data on population density, socioeconomic
+status, suitability of pit latrines, and suggested sewage construction
+priority zones.
 
-The package provides access one data set.
+These data were developed under the USAID Water and Sanitation Project
+in collaboration with the Cap-Haitian municipal government and DINEPA.
+These data do not reflect the opinion of USAID or the US Government.
 
 ``` r
 library(cbssuitabilityhaiti)
@@ -122,9 +147,11 @@ okap
 | economy_nu    | double        | Categotical socioeconomic status according to the description of the variable “economy” (1=low, 2 = medium) |
 | geometry      | list          | Geospatial data of the neighborhood stored as a polygon                                                     |
 
-A small visualisation of this data set
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" style="display: block; margin: auto;" />
 
-<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
+#### Source?
+
+<https://data.humdata.org/dataset/cap-haitien-haiti-sanitation-zoning-assessment>
 
 ## Examples
 
@@ -132,8 +159,33 @@ This is a basic example which shows you how to use the data:
 
 ``` r
 library(cbssuitabilityhaiti)
-## basic example code
+library(tidyverse)
+library(sf)
+library(tmap)
+
+
+## create an interactive map for cap haitien
+
+# set mapping mode to interactive ("view")
+tmap_mode("view")
+
+# create first map layer: neighborhood areas
+tm_shape(filter(okap, cte == "ctecaphaitien")) +
+  tm_borders() +
+  tm_fill(alpha = 0.6) +
+  # create second map layer: locations and type of the water points
+  tm_shape(drop_na(st_join(mwater, okap), neighborho)) +
+  tm_dots(col = "type", palette = "PuRd")
 ```
+
+<div class="figure" style="text-align: center">
+
+<img src="man/figures/screenshot-map-water-access-cap-haitien.png" alt="Screenshot of the an interactive map with OpenStreetMap layer." width="100%" />
+<p class="caption">
+Screenshot of the an interactive map with OpenStreetMap layer.
+</p>
+
+</div>
 
 ## License
 
@@ -149,7 +201,7 @@ citation("cbssuitabilityhaiti")
 #> Um Paket 'cbssuitabilityhaiti' in Publikationen zu zitieren, nutzen Sie
 #> bitte:
 #> 
-#>   Loos S, Lubeck-Schricker M, Kramer S (????). _cbssuitabilityhaiti:
+#>   Loos S, Lubeck-Schricker M, Kramer S (2023). _cbssuitabilityhaiti:
 #>   The Package contains data from the Soil projects in Haiti_. R package
 #>   version 0.0.0.9000.
 #> 
@@ -158,6 +210,7 @@ citation("cbssuitabilityhaiti")
 #>   @Manual{,
 #>     title = {cbssuitabilityhaiti: The Package contains data from the Soil projects in Haiti},
 #>     author = {Sebastian Camilo Loos and Maya Lubeck-Schricker and Sasha Kramer},
+#>     year = {2023},
 #>     note = {R package version 0.0.0.9000},
 #>   }
 ```
