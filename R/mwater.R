@@ -13,6 +13,6 @@
 #'   \item{date_added}{Date water access point was added to mWater}
 #'   \item{datasets}{Dataset in mWater that point is part of, including organizaiton that is responsible for data}
 #'   \item{geometry}{Geospatial data of the different access points that were added to mWater}
-#' }
-#' @source {Plan d’Élaboration propre basée sur les données de la Banque Mondiale: Inondation de Récurrence (5 ans / 25 ans / 100 ans)}
+#'   }
+#'
 "mwater"

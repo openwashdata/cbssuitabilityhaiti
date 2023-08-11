@@ -149,7 +149,7 @@ citation("cbssuitabilityhaiti")
 #> Um Paket 'cbssuitabilityhaiti' in Publikationen zu zitieren, nutzen Sie
 #> bitte:
 #> 
-#>   Loos S, Lubeck-Schricker M, Kramer S (2023). _cbssuitabilityhaiti:
+#>   Loos S, Lubeck-Schricker M, Kramer S (????). _cbssuitabilityhaiti:
 #>   The Package contains data from the Soil projects in Haiti_. R package
 #>   version 0.0.0.9000.
 #> 
@@ -158,7 +158,6 @@ citation("cbssuitabilityhaiti")
 #>   @Manual{,
 #>     title = {cbssuitabilityhaiti: The Package contains data from the Soil projects in Haiti},
 #>     author = {Sebastian Camilo Loos and Maya Lubeck-Schricker and Sasha Kramer},
-#>     year = {2023},
 #>     note = {R package version 0.0.0.9000},
 #>   }
 ```
@@ -167,9 +166,9 @@ citation("cbssuitabilityhaiti")
 
 Anyone interested in publishing the data:
 
-- World Bank flood extent data (`mwater`) should be attributed with
-  “Plan d’Élaboration propre basée sur les données de la Banque
-  Mondiale: Inondation de Récurrence (5 ans / 25 ans / 100 ans)”
+- World Bank flood extent data (`FLOOD_EXTENT_DATASET_NAME`) should be
+  attributed with “Plan d’Élaboration propre basée sur les données de la
+  Banque Mondiale: Inondation de Récurrence (5 ans / 25 ans / 100 ans)”
 
 - Sanitation zoning assessment data (`okap`) should be attributed with
   “These data were developed under the USAID Water and Sanitation

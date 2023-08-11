@@ -16,9 +16,6 @@ A tibble with 1849 rows and 7 variables:
 \item{geometry}{Geospatial data of the different access points that were added to mWater}
 }
 }
-\source{
-{Plan d’Élaboration propre basée sur les données de la Banque Mondiale: Inondation de Récurrence (5 ans / 25 ans / 100 ans)}
-}
 \usage{
 mwater
 }
