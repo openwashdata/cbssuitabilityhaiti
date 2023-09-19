@@ -3,7 +3,7 @@ Title: The Package contains data from the Soil projects in Haiti
 Version: 0.0.0.9000
 Authors@R: c(
     person("Sebastian Camilo", "Loos", , "seba.loos@hotmail.com", role = c("aut","cre"),
-           comment = "0000-0002-8830-1734"),
+           comment = c(ORCID = "0000-0003-2196-5015")),
     person("Maya", "Lubeck-Schricker", , "mlubeck-schricker@oursoil.org", role = "aut"),
     person("Sasha", "Kramer", , "skramer@oursoil.org", role = "aut")
   )

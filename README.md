@@ -6,7 +6,9 @@
 <!-- badges: start -->
 
 [![DOI](ZENODO_DOI_URL.svg)](ZENODO_DOI_URL)
-[![R-CMD-check](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/cbs%20suitabilityhaiti/actions/workflows/R-CMD-check.yaml)
+[![License: CC BY
+4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 <!-- badges: end -->
 
@@ -16,10 +18,6 @@ package combines datasets collected as part of two different projects.
 The package includes geospatial data about the locations of water access
 points and data from a sanitation zoning report for the municipality of
 Cap Haïtien.
-
-|                    |
-|:-------------------|
-| DATA VISUALIZATION |
 
 ## Installation
 
@@ -39,25 +37,14 @@ file from the table below.
 | okap    | [Download CSV](https://github.com/openwashdata/cbssuitabilityhaiti/raw/main/inst/extdata/okap.csv)   | [Download XLSX](https://github.com/openwashdata/cbssuitabilityhaiti/raw/main/inst/extdata/okap.xlsx)   |
 | mwater  | [Download CSV](https://github.com/openwashdata/cbssuitabilityhaiti/raw/main/inst/extdata/mwater.csv) | [Download XLSX](https://github.com/openwashdata/cbssuitabilityhaiti/raw/main/inst/extdata/mwater.xlsx) |
 
-# Projects
+# Datasets
 
-## Case Study: mWater in Haiti
+This data package has two datasets, `mwater` and `okap`.
 
-(One sentence) Evaluating the potential of ……..
+## mwater
 
-### Description
-
-(One to two short paragraphs) This Project focuses on determining …….
-
-### Research Question
-
-(One to two questions)
-
-### Data
-
-Description of the Data. When/Where it was collected. For how long.
-
-The package provides access to one data set.
+Water point data for the city of Cap Haitien, Haiti. The data collection
+and characterization was done between 2016 and 2022.
 
 ``` r
 library(cbssuitabilityhaiti)
@@ -67,7 +54,7 @@ The `mwater` data set has 7 variables and 1849 observations. For an
 overview of the variable names, see the following table.
 
 ``` r
-mwater
+mwater 
 ```
 
 | variable_name | variable_type | description                                                                                  |
@@ -80,7 +67,7 @@ mwater
 | datasets      | character     | Dataset in mWater that point is part of, including organizaiton that is responsible for data |
 | geometry      | list          | Geospatial data of the different access points that were added to mWater                     |
 
-A small visualisation of this data set
+Below is a map of the water points in this dataset.
 
 <div class="figure" style="text-align: center">
 
@@ -90,10 +77,6 @@ Locations of water access points in this dataset
 </p>
 
 </div>
-
-#### Source?
-
-<https://www.mwater.co/projects/haiti>
 
 ## Projet Eau et Assainissement de l’USAID
 
@@ -149,15 +132,20 @@ okap
 
 <img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" style="display: block; margin: auto;" />
 
-#### Source?
+#### Source
 
 <https://data.humdata.org/dataset/cap-haitien-haiti-sanitation-zoning-assessment>
 
 ## Examples
 
-This is a basic example which shows you how to use the data:
+The code below is an example which shows how you could use the data to
+prepare a map in R. Find this and more examples in the [prepared
+examples
+article](https://openwashdata.github.io/cbssuitabilityhaiti/articles/examples.html)
+(`vignette("examples")`).
 
 ``` r
+
 library(cbssuitabilityhaiti)
 library(tidyverse)
 library(sf)
@@ -198,19 +186,17 @@ Please cite using:
 
 ``` r
 citation("cbssuitabilityhaiti")
-#> Um Paket 'cbssuitabilityhaiti' in Publikationen zu zitieren, nutzen Sie
-#> bitte:
+#> To cite package 'cbssuitabilityhaiti' in publications use:
 #> 
-#>   Loos S, Lubeck-Schricker M, Kramer S (2023). _cbssuitabilityhaiti:
+#>   Loos S, Lubeck-Schricker M, Kramer S (????). _cbssuitabilityhaiti:
 #>   The Package contains data from the Soil projects in Haiti_. R package
 #>   version 0.0.0.9000.
 #> 
-#> Ein BibTeX-Eintrag für LaTeX-Benutzer ist
+#> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
 #>     title = {cbssuitabilityhaiti: The Package contains data from the Soil projects in Haiti},
 #>     author = {Sebastian Camilo Loos and Maya Lubeck-Schricker and Sasha Kramer},
-#>     year = {2023},
 #>     note = {R package version 0.0.0.9000},
 #>   }
 ```
@@ -218,10 +204,6 @@ citation("cbssuitabilityhaiti")
 ## Additional data use information
 
 Anyone interested in publishing the data:
-
-- World Bank flood extent data (`FLOOD_EXTENT_DATASET_NAME`) should be
-  attributed with “Plan d’Élaboration propre basée sur les données de la
-  Banque Mondiale: Inondation de Récurrence (5 ans / 25 ans / 100 ans)”
 
 - Sanitation zoning assessment data (`okap`) should be attributed with
   “These data were developed under the USAID Water and Sanitation

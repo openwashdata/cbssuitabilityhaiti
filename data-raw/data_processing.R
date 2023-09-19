@@ -84,32 +84,6 @@ mwater <- mwater |>
          "date_added" = Date.added,
          "datasets" = Datasets..)
 
-# explore tidy data ------------------------------------------------------------
-
-# explore mwater
-
-mwater |>
-  count(datasets)
-mwater |>
-  qtm()
-tm_shape(mwater) +
-  tm_dots(col = "type")
-mwater |>
-  tabyl(administra)
-
-# explore okap
-
-okap |>
-  glimpse()
-okap |>
-  qtm()
-# show okap as tibble
-okap |>
-  sf::st_drop_geometry() |>
-  as_tibble()
-okap
-
-
 # save package data -------------------------------------------------------
 
 # code to prepare `DATASET` dataset goes here

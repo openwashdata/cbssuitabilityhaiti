@@ -33,7 +33,8 @@ library(cbssuitabilityhaiti)
 <!-- badges: start -->
 
 [![DOI](ZENODO_DOI_URL.svg)](ZENODO_DOI_URL)
-[![R-CMD-check](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/cbs suitabilityhaiti/actions/workflows/R-CMD-check.yaml)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 <!-- badges: end -->
 
@@ -43,10 +44,6 @@ package combines datasets collected as part of two different projects.
 The package includes geospatial data about the locations of water access
 points and data from a sanitation zoning report for the municipality of
 Cap Haïtien.
-
-|                    |
-|:-------------------|
-| DATA VISUALIZATION |
 
 ## Installation
 
@@ -77,26 +74,13 @@ read_csv("data-raw/dictionary.csv") |>
 
 ```
 
-# Projects
+# Datasets 
 
-## Case Study: mWater in Haiti
+This data package has two datasets, `mwater` and `okap`.
 
-(One sentence) Evaluating the potential of ........
+## mwater 
 
-### Description
-
-(One to two short paragraphs) This Project focuses on determining
-.......
-
-### Research Question
-
-(One to two questions)
-
-### Data
-
-Description of the Data. When/Where it was collected. For how long.
-
-The package provides access to one data set.
+Water point data for the city of Cap Haitien, Haiti. The data collection and characterization was done between 2016 and 2022.
 
 ```{r}
 library(cbssuitabilityhaiti)
@@ -107,7 +91,7 @@ The `mwater` data set has `r ncol(mwater)` variables and
 see the following table.
 
 ```{r, eval=FALSE}
-mwater
+mwater 
 ```
 
 ```{r, echo=FALSE}
@@ -117,7 +101,7 @@ readr::read_csv("data-raw/dictionary.csv") |>
   knitr::kable()
 ```
 
-A small visualisation of this data set
+Below is a map of the water points in this dataset. 
 
 ```{r, echo=FALSE}
 #| label: fig-water-access-points
@@ -126,10 +110,6 @@ A small visualisation of this data set
 qtm(mwater) +
   tm_graticules()
 ```
-
-#### Source?
-
-<https://www.mwater.co/projects/haiti>
 
 ## Projet Eau et Assainissement de l'USAID
 
@@ -180,15 +160,21 @@ qtm(okap) +
   tm_graticules()
 ```
 
-#### Source?
+#### Source
 
 <https://data.humdata.org/dataset/cap-haitien-haiti-sanitation-zoning-assessment>
 
 ## Examples
 
-This is a basic example which shows you how to use the data:
+The code below is an example which shows how you could use the data to
+prepare a map in R. Find this and more examples in the [prepared
+examples
+article](https://openwashdata.github.io/cbssuitabilityhaiti/articles/examples.html)
+(`vignette("examples")`).
+
 
 ```{r example, eval=FALSE, echo=TRUE}
+
 library(cbssuitabilityhaiti)
 library(tidyverse)
 library(sf)
@@ -229,11 +215,6 @@ citation("cbssuitabilityhaiti")
 ## Additional data use information
 
 Anyone interested in publishing the data:
-
--   World Bank flood extent data (`FLOOD_EXTENT_DATASET_NAME`) should be
-    attributed with "Plan d'Élaboration propre basée sur les données de
-    la Banque Mondiale: Inondation de Récurrence (5 ans / 25 ans / 100
-    ans)"
 
 -   Sanitation zoning assessment data (`okap`) should be attributed with
     "These data were developed under the USAID Water and Sanitation
