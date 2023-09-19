@@ -7,44 +7,43 @@ cff-version: 1.2.0
 message: 'To cite package "cbssuitabilityhaiti" in publications use:'
 type: software
 license: CC-BY-4.0
-title: 'cbssuitabilityhaiti: The Package contains data from the Soil projects in Haiti'
-version: 0.0.0.9000
+title: 'cbssuitabilityhaiti: This package contains data for a sanitation zoning assessment
+  done for the city of Cap Haitien, Haiti. It combines two datasets used for an analysis
+  of the suitability of container-based sanitation (CBS).'
+version: 0.0.1
 abstract: What the package does (one paragraph).
 authors:
 - family-names: Loos
   given-names: Sebastian Camilo
   email: seba.loos@hotmail.com
+  orcid: https://orcid.org/0000-0003-2196-5015
 - family-names: Lubeck-Schricker
   given-names: Maya
   email: mlubeck-schricker@oursoil.org
 - family-names: Kramer
   given-names: Sasha
   email: skramer@oursoil.org
+preferred-citation:
+  type: generic
+  title: 'cbssuitabilityhaiti: The Package contains data from the Soil projects in
+    Haiti'
+  authors:
+  - family-names: Loos
+    given-names: Sebastian Camilo
+    email: seba.loos@hotmail.com
+    orcid: https://orcid.org/0000-0003-2196-5015
+  - family-names: Lubeck-Schricker
+    given-names: Maya
+    email: mlubeck-schricker@oursoil.org
+  - family-names: Kramer
+    given-names: Sasha
+    email: skramer@oursoil.org
+  year: '2023'
+  abstract: What the package does (one paragraph).
+  version: 0.0.0.9000
+date-released: '2023-09-19'
 contact:
 - family-names: Loos
   given-names: Sebastian Camilo
   email: seba.loos@hotmail.com
-references:
-- type: software
-  title: 'R: A Language and Environment for Statistical Computing'
-  notes: Depends
-  url: https://www.R-project.org/
-  authors:
-  - name: R Core Team
-  location:
-    name: Vienna, Austria
-  year: '2023'
-  institution:
-    name: R Foundation for Statistical Computing
-  version: '>= 2.10'
-- type: software
-  title: tmap
-  abstract: 'tmap: Thematic Maps'
-  notes: Suggests
-  url: https://github.com/r-tmap/tmap
-  repository: https://CRAN.R-project.org/package=tmap
-  authors:
-  - family-names: Tennekes
-    given-names: Martijn
-    email: mtennekes@gmail.com
-  year: '2023'
+  orcid: https://orcid.org/0000-0003-2196-5015

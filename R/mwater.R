@@ -1,8 +1,8 @@
-#' Location of different sanitation systems in Haiti
+#' Location of different water points in Cap Haitien, Haiti
 #'
-#' This data includes data from a ........ done for the city
-#' of Cap Haitien, Haiti in 2022. The data collection and characterization was
-#' done between 2016 and 2022.
+#' This data includes water point data from the mWater platform. Water points
+#' are for the city Cap Haitien, Haiti in 2022. The data collection and
+#' characterization was done between 2016 and 2022.
 #'
 #' @format A tibble with 1849 rows and 7 variables:
 #' \describe{

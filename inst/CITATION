@@ -1,0 +1,13 @@
+
+bibentry(bibtype = "Misc",
+         key = "looslubeckschricker:2023",
+         title = "cbssuitabilityhaiti: The Package contains data from the Soil projects in Haiti",
+         author = c(person(given = "Sebastian Camilo",
+                           family = "Loos"),
+                    person(given = "Maya",
+                           family = "Lubeck-Schricker"),
+                    person(given = "Sasha",
+                           family = "Kramer")),
+         year = "2023",
+         abstract = "What the package does (one paragraph).",
+         version = "0.0.0.9000")
