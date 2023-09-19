@@ -198,13 +198,13 @@ library(cffr)
 packageVersion("cffr")
 
 # Hard code doi
-# doi <- "10.5281/zenodo.6470427"
+doi <- "10.5281/zenodo.8361085"
 
 # creates CFF with all author roles
 mod_cff <- cff_create("DESCRIPTION",
                       dependencies = FALSE,
-                      keys = list(#"doi" = doi,
-                        "date-released" = Sys.Date()))
+                      keys = list("doi" = doi,
+                      "date-released" = Sys.Date()))
 
 # Remove the preferred-citation key
 mod_cff$`preferred-citation` <- NULL

@@ -31,11 +31,9 @@ library(cbssuitabilityhaiti)
 # cbssuitabilityhaiti
 
 <!-- badges: start -->
-
-[![DOI](ZENODO_DOI_URL.svg)](ZENODO_DOI_URL)
-[![R-CMD-check](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/cbs suitabilityhaiti/actions/workflows/R-CMD-check.yaml)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8361085.svg)](https://doi.org/10.5281/zenodo.8361085)
 [![R-CMD-check](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 <!-- badges: end -->
 
 The goal of `cbssuitabiility` is to provide datasets for research and

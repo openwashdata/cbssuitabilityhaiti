@@ -5,11 +5,10 @@
 
 <!-- badges: start -->
 
-[![DOI](ZENODO_DOI_URL.svg)](ZENODO_DOI_URL)
-[![R-CMD-check](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/cbs%20suitabilityhaiti/actions/workflows/R-CMD-check.yaml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8361085.svg)](https://doi.org/10.5281/zenodo.8361085)
+[![R-CMD-check](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml)
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-
 <!-- badges: end -->
 
 The goal of `cbssuitabiility` is to provide datasets for research and
@@ -188,16 +187,19 @@ Please cite using:
 citation("cbssuitabilityhaiti")
 #> To cite package 'cbssuitabilityhaiti' in publications use:
 #> 
-#>   Loos S, Lubeck-Schricker M, Kramer S (????). _cbssuitabilityhaiti:
-#>   The Package contains data from the Soil projects in Haiti_. R package
-#>   version 0.0.0.9000.
+#>   Loos S, Lubeck-Schricker M, Kramer S (2023). "cbssuitabilityhaiti:
+#>   This package contains data for a sanitation zoning assessment done
+#>   for the city of Cap Haitien, Haiti. It combines two datasets used for
+#>   an analysis of the suitability of container-based sanitation (CBS)."
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
-#>   @Manual{,
-#>     title = {cbssuitabilityhaiti: The Package contains data from the Soil projects in Haiti},
+#>   @Misc{looslubeckschricker,
+#>     title = {cbssuitabilityhaiti: This package contains data for a sanitation zoning assessment done for the city of Cap Haitien, Haiti. It combines two datasets used for an analysis of the suitability of container-based sanitation (CBS).},
 #>     author = {Sebastian Camilo Loos and Maya Lubeck-Schricker and Sasha Kramer},
-#>     note = {R package version 0.0.0.9000},
+#>     year = {2023},
+#>     abstract = {What the package does (one paragraph).},
+#>     version = {0.0.1},
 #>   }
 ```
 

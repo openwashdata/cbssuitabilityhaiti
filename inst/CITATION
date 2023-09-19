@@ -9,5 +9,6 @@ bibentry(bibtype = "Misc",
                     person(given = "Sasha",
                            family = "Kramer")),
          year = "2023",
+         doi = "10.5281/zenodo.8361085",
          abstract = "What the package does (one paragraph).",
          version = "0.0.1")

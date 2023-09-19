@@ -11,6 +11,7 @@ title: 'cbssuitabilityhaiti: This package contains data for a sanitation zoning 
   done for the city of Cap Haitien, Haiti. It combines two datasets used for an analysis
   of the suitability of container-based sanitation (CBS).'
 version: 0.0.1
+doi: 10.5281/zenodo.8361085
 abstract: What the package does (one paragraph).
 authors:
 - family-names: Loos
