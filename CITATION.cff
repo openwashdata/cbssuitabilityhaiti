@@ -23,24 +23,6 @@ authors:
 - family-names: Kramer
   given-names: Sasha
   email: skramer@oursoil.org
-preferred-citation:
-  type: generic
-  title: 'cbssuitabilityhaiti: The Package contains data from the Soil projects in
-    Haiti'
-  authors:
-  - family-names: Loos
-    given-names: Sebastian Camilo
-    email: seba.loos@hotmail.com
-    orcid: https://orcid.org/0000-0003-2196-5015
-  - family-names: Lubeck-Schricker
-    given-names: Maya
-    email: mlubeck-schricker@oursoil.org
-  - family-names: Kramer
-    given-names: Sasha
-    email: skramer@oursoil.org
-  year: '2023'
-  abstract: What the package does (one paragraph).
-  version: 0.0.0.9000
 date-released: '2023-09-19'
 contact:
 - family-names: Loos

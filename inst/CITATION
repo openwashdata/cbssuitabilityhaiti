@@ -1,7 +1,7 @@
 
 bibentry(bibtype = "Misc",
-         key = "looslubeckschricker:2023",
-         title = "cbssuitabilityhaiti: The Package contains data from the Soil projects in Haiti",
+         key = "looslubeckschricker",
+         title = "cbssuitabilityhaiti: This package contains data for a sanitation zoning assessment done for the city of Cap Haitien, Haiti. It combines two datasets used for an analysis of the suitability of container-based sanitation (CBS).",
          author = c(person(given = "Sebastian Camilo",
                            family = "Loos"),
                     person(given = "Maya",
@@ -10,4 +10,4 @@ bibentry(bibtype = "Misc",
                            family = "Kramer")),
          year = "2023",
          abstract = "What the package does (one paragraph).",
-         version = "0.0.0.9000")
+         version = "0.0.1")

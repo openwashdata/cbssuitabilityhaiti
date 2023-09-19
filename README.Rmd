@@ -35,7 +35,7 @@ library(cbssuitabilityhaiti)
 [![DOI](ZENODO_DOI_URL.svg)](ZENODO_DOI_URL)
 [![R-CMD-check](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/cbs suitabilityhaiti/actions/workflows/R-CMD-check.yaml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-
+[![R-CMD-check](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of `cbssuitabiility` is to provide datasets for research and
