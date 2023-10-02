@@ -191,6 +191,7 @@ citation("cbssuitabilityhaiti")
 #>   This package contains data for a sanitation zoning assessment done
 #>   for the city of Cap Haitien, Haiti. It combines two datasets used for
 #>   an analysis of the suitability of container-based sanitation (CBS)."
+#>   doi:10.5281/zenodo.8361085 <https://doi.org/10.5281/zenodo.8361085>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
@@ -198,6 +199,7 @@ citation("cbssuitabilityhaiti")
 #>     title = {cbssuitabilityhaiti: This package contains data for a sanitation zoning assessment done for the city of Cap Haitien, Haiti. It combines two datasets used for an analysis of the suitability of container-based sanitation (CBS).},
 #>     author = {Sebastian Camilo Loos and Maya Lubeck-Schricker and Sasha Kramer},
 #>     year = {2023},
+#>     doi = {10.5281/zenodo.8361085},
 #>     abstract = {What the package does (one paragraph).},
 #>     version = {0.0.1},
 #>   }
