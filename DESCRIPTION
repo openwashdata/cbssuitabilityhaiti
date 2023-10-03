@@ -1,12 +1,13 @@
 Package: cbssuitabilityhaiti
-Title: Data for a sanitation zoning assessment done for Cap Haitien, Haiti.
+Title: Data for a sanitation zoning assessment done for Cap Haitien, Haiti
 Version: 0.0.1
 Authors@R: c(
     person("Sebastian Camilo", "Loos", , "seba.loos@hotmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-2196-5015")),
+    person("Sasha", "Kramer", , "skramer@oursoil.org", role = "aut",
+           comment = c(ORCID = "0000-0002-4048-7517")),
     person("Maya", "Lubeck-Schricker", , "mlubeck-schricker@oursoil.org", role = "aut",
            comment = c(ORCID = "0000-0002-8659-5943")),
-    person("Sasha", "Kramer", , "skramer@oursoil.org", role = "aut"),
     person("Mian", "Zhong", , "mzhong@ethz.ch", role = "ctb",
            comment = c(ORCID = "0009-0009-4546-7214"))
   )

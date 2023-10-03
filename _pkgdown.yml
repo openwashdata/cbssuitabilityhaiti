@@ -15,8 +15,7 @@ home:
     components:
       custom:
         title: Funding
-        text: This project was funded by the [Global Health Engineering group at ETH Zurich](https://ghe.ethz.ch/).
-
+        text: This project was funded by the [Open Research Data Program of the ETH Board](https://ethrat.ch/en/eth-domain/open-research-data/).
 authors:
   footer:
     roles: [cre, fnd]

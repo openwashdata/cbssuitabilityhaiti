@@ -2,7 +2,7 @@
 # CITATION file created with {cffr} R package, v0.5.0
 # See also: https://docs.ropensci.org/cffr/
 # -----------------------------------------------------------
- 
+
 cff-version: 1.2.0
 message: 'To cite package "cbssuitabilityhaiti" in publications use:'
 type: software
@@ -19,18 +19,18 @@ authors:
   given-names: Sebastian Camilo
   email: seba.loos@hotmail.com
   orcid: https://orcid.org/0000-0003-2196-5015
+- family-names: Kramer
+  given-names: Sasha
+  email: skramer@oursoil.org
+  orcid: https://orcid.org/0000-0002-4048-7517
 - family-names: Lubeck-Schricker
   given-names: Maya
   email: mlubeck-schricker@oursoil.org
   orcid: https://orcid.org/0000-0002-8659-5943
-- family-names: Kramer
-  given-names: Sasha
-  email: skramer@oursoil.org
 preferred-citation:
   type: generic
-  title: 'cbssuitabilityhaiti: This package contains data for a sanitation zoning
-    assessment done for the city of Cap Haitien, Haiti. It combines two datasets used
-    for an analysis of the suitability of container-based sanitation (CBS).'
+  title: 'cbssuitabilityhaiti: Data for a sanitation zoning assessment done for Cap
+  Haitien, Haiti.'
   authors:
   - family-names: Loos
     given-names: Sebastian Camilo
@@ -43,9 +43,12 @@ preferred-citation:
   - family-names: Kramer
     given-names: Sasha
     email: skramer@oursoil.org
+    orcid: https://orcid.org/0000-0002-4048-7517
   year: '2023'
   doi: 10.5281/zenodo.8361085
-  abstract: What the package does (one paragraph).
+  abstract: This package contains data for a sanitation zoning assessment done for the
+  city of Cap Haitien, Haiti. It combines two datasets used for an analysis of the
+  suitability of container-based sanitation (CBS).
   version: 0.0.1
 contact:
 - family-names: Loos
