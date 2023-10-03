@@ -3,7 +3,7 @@
 \docType{data}
 \name{mwater}
 \alias{mwater}
-\title{Location of different sanitation systems in Haiti}
+\title{Location of different water points in Cap Haitien, Haiti}
 \format{
 A tibble with 1849 rows and 7 variables:
 \describe{
@@ -20,8 +20,8 @@ A tibble with 1849 rows and 7 variables:
 mwater
 }
 \description{
-This data includes data from a ........ done for the city
-of Cap Haitien, Haiti in 2022. The data collection and characterization was
-done between 2016 and 2022.
+This data includes water point data from the mWater platform. Water points
+are for the city Cap Haitien, Haiti in 2022. The data collection and
+characterization was done between 2016 and 2022.
 }
 \keyword{datasets}

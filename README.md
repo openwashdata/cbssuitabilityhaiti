@@ -187,20 +187,18 @@ Please cite using:
 citation("cbssuitabilityhaiti")
 #> To cite package 'cbssuitabilityhaiti' in publications use:
 #> 
-#>   Loos S, Lubeck-Schricker M, Kramer S (2023). "cbssuitabilityhaiti:
-#>   This package contains data for a sanitation zoning assessment done
-#>   for the city of Cap Haitien, Haiti. It combines two datasets used for
-#>   an analysis of the suitability of container-based sanitation (CBS)."
+#>   Loos S, Kramer S, Lubeck-Schricker M (2023). "cbssuitabilityhaiti:
+#>   Data for a sanitation zoning assessment done for Cap Haitien, Haiti."
 #>   doi:10.5281/zenodo.8361085 <https://doi.org/10.5281/zenodo.8361085>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
-#>   @Misc{looslubeckschricker,
-#>     title = {cbssuitabilityhaiti: This package contains data for a sanitation zoning assessment done for the city of Cap Haitien, Haiti. It combines two datasets used for an analysis of the suitability of container-based sanitation (CBS).},
-#>     author = {Sebastian Camilo Loos and Maya Lubeck-Schricker and Sasha Kramer},
-#>     year = {2023},
+#>   @Misc{looskramer,
+#>     title = {cbssuitabilityhaiti: Data for a sanitation zoning assessment done for Cap Haitien, Haiti},
+#>     author = {Sebastian Camilo Loos and Sasha Kramer and Maya Lubeck-Schricker},
 #>     doi = {10.5281/zenodo.8361085},
-#>     abstract = {What the package does (one paragraph).},
+#>     year = {2023},
+#>     abstract = {This package contains data for a sanitation zoning assessment done for the city of Cap Haitien, Haiti. It combines two datasets used for an analysis of the suitability of container-based sanitation (CBS).},
 #>     version = {0.0.1},
 #>   }
 ```

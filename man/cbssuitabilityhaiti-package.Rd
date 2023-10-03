@@ -4,17 +4,22 @@
 \name{cbssuitabilityhaiti-package}
 \alias{cbssuitabilityhaiti}
 \alias{cbssuitabilityhaiti-package}
-\title{cbssuitabilityhaiti: The Package contains data from the Soil projects in Haiti}
+\title{cbssuitabilityhaiti: Data for a sanitation zoning assessment done for Cap Haitien, Haiti}
 \description{
-What the package does (one paragraph).
+This package contains data for a sanitation zoning assessment done for the city of Cap Haitien, Haiti. It combines two datasets used for an analysis of the suitability of container-based sanitation (CBS).
 }
 \author{
-\strong{Maintainer}: Sebastian Camilo Loos \email{seba.loos@hotmail.com} (0000-0002-8830-1734)
+\strong{Maintainer}: Sebastian Camilo Loos \email{seba.loos@hotmail.com} (\href{https://orcid.org/0000-0003-2196-5015}{ORCID})
 
 Authors:
 \itemize{
-  \item Maya Lubeck-Schricker \email{mlubeck-schricker@oursoil.org}
-  \item Sasha Kramer \email{skramer@oursoil.org}
+  \item Sasha Kramer \email{skramer@oursoil.org} (\href{https://orcid.org/0000-0002-4048-7517}{ORCID})
+  \item Maya Lubeck-Schricker \email{mlubeck-schricker@oursoil.org} (\href{https://orcid.org/0000-0002-8659-5943}{ORCID})
+}
+
+Other contributors:
+\itemize{
+  \item Mian Zhong \email{mzhong@ethz.ch} (\href{https://orcid.org/0009-0009-4546-7214}{ORCID}) [contributor]
 }
 
 }
