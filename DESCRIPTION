@@ -25,3 +25,8 @@ Language: en-GB
 Config/Needs/website: rmarkdown
 Suggests: 
     tmap
+URL: https://github.com/openwashdata/cbssuitabilityhaiti
+BugReports: https://github.com/openwashdata/cbssuitabilityhaiti/issues
+X-schema.org-keywords: open data, washdata, sanitation, sanitation zoning, container-based sanitation, water points, urban planning, Cap Haitien, Haiti
+X-schema.org-spatialCoverage: Cap Haitien and five other communes (Canaan, Croix-des-Bouquets, Jeremie, Les Cayes, Mirebalais), Haiti
+X-schema.org-temporalCoverage: 2015-07-24/2022-12-31

@@ -1,16 +1,16 @@
-# -----------------------------------------------------------
-# CITATION file created with {cffr} R package, v0.5.0
+# ------------------------------------------------
+# CITATION.cff file created with {cffr} R package
 # See also: https://docs.ropensci.org/cffr/
-# -----------------------------------------------------------
+# ------------------------------------------------
  
 cff-version: 1.2.0
 message: 'To cite package "cbssuitabilityhaiti" in publications use:'
-type: software
+type: dataset
 license: CC-BY-4.0
 title: 'cbssuitabilityhaiti: Data for a sanitation zoning assessment done for Cap
   Haitien, Haiti'
 version: 0.0.1
-doi: 10.5281/zenodo.8361085
+doi: 10.5281/zenodo.8361084
 abstract: This package contains data for a sanitation zoning assessment done for the
   city of Cap Haitien, Haiti. It combines two datasets used for an analysis of the
   suitability of container-based sanitation (CBS).
@@ -27,55 +27,29 @@ authors:
   given-names: Maya
   email: mlubeck-schricker@oursoil.org
   orcid: https://orcid.org/0000-0002-8659-5943
-preferred-citation:
-  type: generic
-  title: 'cbssuitabilityhaiti: Data for a sanitation zoning assessment done for Cap
-    Haitien, Haiti'
-  authors:
-  - family-names: Loos
-    given-names: Sebastian Camilo
-    email: seba.loos@hotmail.com
-    orcid: https://orcid.org/0000-0003-2196-5015
-  - family-names: Kramer
-    given-names: Sasha
-    email: skramer@oursoil.org
-    orcid: https://orcid.org/0000-0002-4048-7517
-  - family-names: Lubeck-Schricker
-    given-names: Maya
-    email: mlubeck-schricker@oursoil.org
-    orcid: https://orcid.org/0000-0002-8659-5943
-  doi: 10.5281/zenodo.8361085
-  year: '2023'
-  abstract: This package contains data for a sanitation zoning assessment done for
-    the city of Cap Haitien, Haiti. It combines two datasets used for an analysis
-    of the suitability of container-based sanitation (CBS).
-  version: 0.0.1
+repository-code: https://github.com/openwashdata/cbssuitabilityhaiti
+url: https://github.com/openwashdata/cbssuitabilityhaiti
 contact:
 - family-names: Loos
   given-names: Sebastian Camilo
   email: seba.loos@hotmail.com
   orcid: https://orcid.org/0000-0003-2196-5015
-references:
-- type: software
-  title: 'R: A Language and Environment for Statistical Computing'
-  notes: Depends
-  url: https://www.R-project.org/
-  authors:
-  - name: R Core Team
-  location:
-    name: Vienna, Austria
-  year: '2023'
-  institution:
-    name: R Foundation for Statistical Computing
-  version: '>= 2.10'
-- type: software
-  title: tmap
-  abstract: 'tmap: Thematic Maps'
-  notes: Suggests
-  url: https://r-tmap.github.io/tmap/
-  repository: https://CRAN.R-project.org/package=tmap
-  authors:
-  - family-names: Tennekes
-    given-names: Martijn
-    email: mtennekes@gmail.com
-  year: '2023'
+keywords:
+- open data
+- washdata
+- sanitation
+- sanitation zoning
+- container-based sanitation
+- water points
+- urban planning
+- Cap Haitien
+- Haiti
+- central-america
+- container-based-sanitation
+- haiti
+- open-data
+- open-datasets
+- r
+- suitability-analysis
+- wash
+
