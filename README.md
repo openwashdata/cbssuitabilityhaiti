@@ -5,18 +5,18 @@
 
 <!-- badges: start -->
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8361085.svg)](https://doi.org/10.5281/zenodo.8361085)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8361084.svg)](https://zenodo.org/doi/10.5281/zenodo.8361084)
 [![R-CMD-check](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml)
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 <!-- badges: end -->
 
-The goal of `cbssuitabiility` is to provide datasets for research and
-planning of water and solid waste management in Cap Haïtien, Haiti. This
-package combines datasets collected as part of two different projects.
-The package includes geospatial data about the locations of water access
-points and data from a sanitation zoning report for the municipality of
-Cap Haïtien.
+The goal of `cbssuitabilityhaiti` is to provide datasets for research
+and planning of water and solid waste management in Cap Haïtien, Haiti.
+This package combines datasets collected as part of two different
+projects. The package includes geospatial data about the locations of
+water access points and data from a sanitation zoning report for the
+municipality of Cap Haïtien.
 
 ## Installation
 
@@ -31,10 +31,10 @@ devtools::install_github("openwashdata/cbssuitabilityhaiti")
 Alternatively, you can download the individual datasets as a CSV or XLSX
 file from the table below.
 
-| dataset | CSV                                                                                                  | XLSX                                                                                                   |
-|:--------|:-----------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------|
-| okap    | [Download CSV](https://github.com/openwashdata/cbssuitabilityhaiti/raw/main/inst/extdata/okap.csv)   | [Download XLSX](https://github.com/openwashdata/cbssuitabilityhaiti/raw/main/inst/extdata/okap.xlsx)   |
-| mwater  | [Download CSV](https://github.com/openwashdata/cbssuitabilityhaiti/raw/main/inst/extdata/mwater.csv) | [Download XLSX](https://github.com/openwashdata/cbssuitabilityhaiti/raw/main/inst/extdata/mwater.xlsx) |
+| dataset | CSV | XLSX |
+|:---|:---|:---|
+| okap | [Download CSV](https://github.com/openwashdata/cbssuitabilityhaiti/raw/main/inst/extdata/okap.csv) | [Download XLSX](https://github.com/openwashdata/cbssuitabilityhaiti/raw/main/inst/extdata/okap.xlsx) |
+| mwater | [Download CSV](https://github.com/openwashdata/cbssuitabilityhaiti/raw/main/inst/extdata/mwater.csv) | [Download XLSX](https://github.com/openwashdata/cbssuitabilityhaiti/raw/main/inst/extdata/mwater.xlsx) |
 
 # Datasets
 
@@ -43,7 +43,7 @@ This data package has two datasets, `mwater` and `okap`.
 ## mwater
 
 Water point data for the city of Cap Haitien, Haiti. The data collection
-and characterization was done between 2016 and 2022.
+and characterization was done between 2015 and 2022.
 
 ``` r
 library(cbssuitabilityhaiti)
@@ -56,15 +56,15 @@ overview of the variable names, see the following table.
 mwater 
 ```
 
-| variable_name | variable_type | description                                                                                  |
-|:--------------|:--------------|:---------------------------------------------------------------------------------------------|
-| latitude      | double        | Lattitude coordinate                                                                         |
-| longitude     | double        | Longitude coordinate                                                                         |
-| administra    | character     | Communal section- smallest administrative unit in Haiti                                      |
-| type          | character     | Type of water access point                                                                   |
-| date_added    | double        | Date water access point was added to mWater                                                  |
-| datasets      | character     | Dataset in mWater that point is part of, including organizaiton that is responsible for data |
-| geometry      | list          | Geospatial data of the different access points that were added to mWater                     |
+| variable_name | variable_type | description |
+|:---|:---|:---|
+| latitude | double | Lattitude coordinate |
+| longitude | double | Longitude coordinate |
+| administra | character | Communal section- smallest administrative unit in Haiti |
+| type | character | Type of water access point |
+| date_added | double | Date water access point was added to mWater |
+| datasets | character | Dataset in mWater that point is part of, including organizaiton that is responsible for data |
+| geometry | list | Geospatial data of the different access points that were added to mWater |
 
 Below is a map of the water points in this dataset.
 
@@ -72,6 +72,7 @@ Below is a map of the water points in this dataset.
 
 <img src="man/figures/README-fig-water-access-points-1.png" alt="Locations of water access points in this dataset" width="100%" />
 <p class="caption">
+
 Locations of water access points in this dataset
 </p>
 
@@ -93,7 +94,8 @@ criteria.
 
 This data includes data from a sanitation zoning report done for the
 city of Cap Haïtien, Haiti in 2022. Additionally, it contains spatial
-data about the neighborhoods of 5 different Haïtien cities. The
+data about the neighborhoods of Cap Haïtien and five other communes in
+Haiti (Canaan, Croix-des-Bouquets, Jérémie, Les Cayes, Mirebalais). The
 attribute table includes data on population density, socioeconomic
 status, suitability of pit latrines, and suggested sewage construction
 priority zones.
@@ -113,23 +115,23 @@ overview of the variable names, see the following table.
 okap
 ```
 
-| variable_name | variable_type | description                                                                                                 |
-|:--------------|:--------------|:------------------------------------------------------------------------------------------------------------|
-| neighborho    | double        | Unique identifying number for each neighborhood unit                                                        |
-| name          | character     | Name of each nieghborhood unit                                                                              |
-| sup_km2       | double        | Area of neighborhood in square km                                                                           |
-| cte           | character     | Name of commune (administrative unit in Haiti)                                                              |
-| economy       | character     | Categorical socioeconomic status (low, medium)                                                              |
-| sup_bati_km2  | double        | area of neihborhood covered by buildings in square kilometers                                               |
-| density       | integer       | Categorical population density (least dense, somewhat dense, dense, very dense, most dense)                 |
-| aptitude      | character     | suitability of the site for a wastewater treatment system                                                   |
-| zoning        | character     | “group” if collective or grouped sanitation is possible in short term.                                      |
-| latrine       | character     | Suggested pit latrine and septic allowance (allowed, not allowed)                                           |
-| density_ra    | double        | Catgoriccal population density according to the description of the variable “density” (values from 1 to 5)  |
-| economy_nu    | double        | Categotical socioeconomic status according to the description of the variable “economy” (1=low, 2 = medium) |
-| geometry      | list          | Geospatial data of the neighborhood stored as a polygon                                                     |
+| variable_name | variable_type | description |
+|:---|:---|:---|
+| neighborho | double | Unique identifying number for each neighborhood unit |
+| name | character | Name of each nieghborhood unit |
+| sup_km2 | double | Area of neighborhood in square km |
+| cte | character | Name of commune (administrative unit in Haiti) |
+| economy | character | Categorical socioeconomic status (low, medium) |
+| sup_bati_km2 | double | area of neihborhood covered by buildings in square kilometers |
+| density | integer | Categorical population density (least dense, somewhat dense, dense, very dense, most dense) |
+| aptitude | character | suitability of the site for a wastewater treatment system |
+| zoning | character | “group” if collective or grouped sanitation is possible in short term. |
+| latrine | character | Suggested pit latrine and septic allowance (allowed, not allowed) |
+| density_ra | double | Catgoriccal population density according to the description of the variable “density” (values from 1 to 5) |
+| economy_nu | double | Categotical socioeconomic status according to the description of the variable “economy” (1 = medium, 2 = low) |
+| geometry | list | Geospatial data of the neighborhood stored as a polygon |
 
-<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-9-1.png" alt="" width="100%" style="display: block; margin: auto;" />
 
 #### Source
 
@@ -169,6 +171,7 @@ tm_shape(filter(okap, cte == "ctecaphaitien")) +
 
 <img src="man/figures/screenshot-map-water-access-cap-haitien.png" alt="Screenshot of the an interactive map with OpenStreetMap layer." width="100%" />
 <p class="caption">
+
 Screenshot of the an interactive map with OpenStreetMap layer.
 </p>
 
@@ -177,7 +180,7 @@ Screenshot of the an interactive map with OpenStreetMap layer.
 ## License
 
 Data are available as
-[CC-BY](https://github.com/openwashdata/cbssuitability/blob/main/LICENSE.md).
+[CC-BY](https://github.com/openwashdata/cbssuitabilityhaiti/blob/main/LICENSE.md).
 
 ## Citation
 
@@ -188,17 +191,20 @@ citation("cbssuitabilityhaiti")
 #> To cite package 'cbssuitabilityhaiti' in publications use:
 #> 
 #>   Loos S, Kramer S, Lubeck-Schricker M (2023). "cbssuitabilityhaiti:
-#>   Data for a sanitation zoning assessment done for Cap Haitien, Haiti."
-#>   doi:10.5281/zenodo.8361085 <https://doi.org/10.5281/zenodo.8361085>.
+#>   Sanitation Zoning and Water Points, Cap Haitien, Haiti 2015-2022."
+#>   doi:10.5281/zenodo.8361084 <https://doi.org/10.5281/zenodo.8361084>.
+#>   <https://github.com/openwashdata/cbssuitabilityhaiti>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
-#>   @Misc{looskramer,
-#>     title = {cbssuitabilityhaiti: Data for a sanitation zoning assessment done for Cap Haitien, Haiti},
+#>   @Misc{loos_etall:2023,
+#>     title = {cbssuitabilityhaiti: Sanitation Zoning and Water Points, Cap Haitien, Haiti 2015-2022},
 #>     author = {Sebastian Camilo Loos and Sasha Kramer and Maya Lubeck-Schricker},
-#>     doi = {10.5281/zenodo.8361085},
 #>     year = {2023},
-#>     abstract = {This package contains data for a sanitation zoning assessment done for the city of Cap Haitien, Haiti. It combines two datasets used for an analysis of the suitability of container-based sanitation (CBS).},
+#>     doi = {10.5281/zenodo.8361084},
+#>     url = {https://github.com/openwashdata/cbssuitabilityhaiti},
+#>     abstract = {This package contains data for a sanitation zoning assessment of Cap Haitien, Haiti, used for an analysis of the suitability of container-based sanitation (CBS). It combines two datasets: neighbourhood level zoning data from a 2022 sanitation zoning assessment, covering Cap Haitien and five other communes in Haiti, and the locations of 1849 water points in the Cap Haitien area from the mWater platform, added between 2015 and 2022.},
+#>     keywords = {open data,washdata,sanitation,sanitation zoning,container-based sanitation,water points,urban planning,Cap Haitien,Haiti,central-america,container-based-sanitation,haiti,open-data,open-datasets,r,suitability-analysis,wash},
 #>     version = {0.0.1},
 #>   }
 ```

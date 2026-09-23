@@ -7,3 +7,4 @@ R/publish_openwashdata.R
 .DS_Store
 
 *.bk*
+docs

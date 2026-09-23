@@ -1,9 +1,9 @@
-url: https://github.com/openwashdata/cbssuitabilityhaiti
+url: https://openwashdata.github.io/cbssuitabilityhaiti/
 template:
   bootstrap: 5
   includes:
     in_header: |
-      <script defer data-domain="openwashdata.github.io/cbssuitability" src="https://plausible.io/js/script.js"></script>
+      <script defer data-domain="openwashdata.github.io" src="https://plausible.io/js/script.js"></script>
 
 home:
   links:
