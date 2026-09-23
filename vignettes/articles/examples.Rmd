@@ -63,7 +63,6 @@ tmap_mode("view")
 
 haiti_adm3 |> 
   tm_shape() +
-  tmap_options(check.and.fix = TRUE) +
   tm_borders() +
   tm_fill(col = "orange", alpha = 0.6) +
   tm_shape(filter(haiti_adm3, (ID_2 == 24 | ID_2 == 25) & ID_3 != 76 & ID_3 != 80)) +
