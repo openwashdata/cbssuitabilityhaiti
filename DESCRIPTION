@@ -1,5 +1,5 @@
 Package: cbssuitabilityhaiti
-Title: Data for a sanitation zoning assessment done for Cap Haitien, Haiti
+Title: Sanitation Zoning and Water Points, Cap Haitien, Haiti 2015-2022
 Version: 0.0.1
 Authors@R: c(
     person("Sebastian Camilo", "Loos", , "seba.loos@hotmail.com", role = c("aut", "cre"),
@@ -11,17 +11,21 @@ Authors@R: c(
     person("Mian", "Zhong", , "mzhong@ethz.ch", role = "ctb",
            comment = c(ORCID = "0009-0009-4546-7214"))
   )
-Description: This package contains data for a sanitation zoning assessment done for 
-    the city of Cap Haitien, Haiti. It combines two datasets used for an analysis 
-    of the suitability of container-based sanitation (CBS).
+Description: This package contains data for a sanitation zoning assessment of
+    Cap Haitien, Haiti, used for an analysis of the suitability of
+    container-based sanitation (CBS). It combines two datasets: neighbourhood
+    level zoning data from a 2022 sanitation zoning assessment, covering Cap
+    Haitien and five other communes in Haiti, and the locations of 1849 water
+    points in the Cap Haitien area from the mWater platform, added between 2015
+    and 2022.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
 Depends: 
     R (>= 2.10)
 LazyData: true
 Language: en-GB
+Date: 2023-09-19
 Config/Needs/website: rmarkdown, tidyverse, here, sf, tmap, spData, janitor, devtools
 Suggests: 
     tmap
@@ -30,3 +34,4 @@ BugReports: https://github.com/openwashdata/cbssuitabilityhaiti/issues
 X-schema.org-keywords: open data, washdata, sanitation, sanitation zoning, container-based sanitation, water points, urban planning, Cap Haitien, Haiti
 X-schema.org-spatialCoverage: Cap Haitien and five other communes (Canaan, Croix-des-Bouquets, Jeremie, Les Cayes, Mirebalais), Haiti
 X-schema.org-temporalCoverage: 2015-07-24/2022-12-31
+Config/roxygen2/version: 8.0.0

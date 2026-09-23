@@ -7,13 +7,16 @@ cff-version: 1.2.0
 message: 'To cite package "cbssuitabilityhaiti" in publications use:'
 type: dataset
 license: CC-BY-4.0
-title: 'cbssuitabilityhaiti: Data for a sanitation zoning assessment done for Cap
-  Haitien, Haiti'
+title: 'cbssuitabilityhaiti: Sanitation Zoning and Water Points, Cap Haitien, Haiti
+  2015-2022'
 version: 0.0.1
 doi: 10.5281/zenodo.8361084
-abstract: This package contains data for a sanitation zoning assessment done for the
-  city of Cap Haitien, Haiti. It combines two datasets used for an analysis of the
-  suitability of container-based sanitation (CBS).
+abstract: 'This package contains data for a sanitation zoning assessment of Cap Haitien,
+  Haiti, used for an analysis of the suitability of container-based sanitation (CBS).
+  It combines two datasets: neighbourhood level zoning data from a 2022 sanitation
+  zoning assessment, covering Cap Haitien and five other communes in Haiti, and the
+  locations of 1849 water points in the Cap Haitien area from the mWater platform,
+  added between 2015 and 2022.'
 authors:
 - family-names: Loos
   given-names: Sebastian Camilo
@@ -29,6 +32,7 @@ authors:
   orcid: https://orcid.org/0000-0002-8659-5943
 repository-code: https://github.com/openwashdata/cbssuitabilityhaiti
 url: https://github.com/openwashdata/cbssuitabilityhaiti
+date-released: '2023-09-19'
 contact:
 - family-names: Loos
   given-names: Sebastian Camilo

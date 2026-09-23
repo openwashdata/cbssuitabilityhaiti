@@ -4,15 +4,24 @@
 \name{cbssuitabilityhaiti-package}
 \alias{cbssuitabilityhaiti}
 \alias{cbssuitabilityhaiti-package}
-\title{cbssuitabilityhaiti: Data for a sanitation zoning assessment done for Cap Haitien, Haiti}
+\title{cbssuitabilityhaiti: Sanitation Zoning and Water Points, Cap Haitien, Haiti 2015-2022}
 \description{
-This package contains data for a sanitation zoning assessment done for the city of Cap Haitien, Haiti. It combines two datasets used for an analysis of the suitability of container-based sanitation (CBS).
+This package contains data for a sanitation zoning assessment of Cap Haitien, Haiti, used for an analysis of the suitability of container-based sanitation (CBS). It combines two datasets: neighbourhood level zoning data from a 2022 sanitation zoning assessment, covering Cap Haitien and five other communes in Haiti, and the locations of 1849 water points in the Cap Haitien area from the mWater platform, added between 2015 and 2022.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/openwashdata/cbssuitabilityhaiti}
+  \item Report bugs at \url{https://github.com/openwashdata/cbssuitabilityhaiti/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Sebastian Camilo Loos \email{seba.loos@hotmail.com} (\href{https://orcid.org/0000-0003-2196-5015}{ORCID})
 
 Authors:
 \itemize{
+  \item Sebastian Camilo Loos \email{seba.loos@hotmail.com} (\href{https://orcid.org/0000-0003-2196-5015}{ORCID})
   \item Sasha Kramer \email{skramer@oursoil.org} (\href{https://orcid.org/0000-0002-4048-7517}{ORCID})
   \item Maya Lubeck-Schricker \email{mlubeck-schricker@oursoil.org} (\href{https://orcid.org/0000-0002-8659-5943}{ORCID})
 }

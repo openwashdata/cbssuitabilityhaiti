@@ -11,12 +11,12 @@
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 <!-- badges: end -->
 
-The goal of `cbssuitabiility` is to provide datasets for research and
-planning of water and solid waste management in Cap Haïtien, Haiti. This
-package combines datasets collected as part of two different projects.
-The package includes geospatial data about the locations of water access
-points and data from a sanitation zoning report for the municipality of
-Cap Haïtien.
+The goal of `cbssuitabilityhaiti` is to provide datasets for research
+and planning of water and solid waste management in Cap Haïtien, Haiti.
+This package combines datasets collected as part of two different
+projects. The package includes geospatial data about the locations of
+water access points and data from a sanitation zoning report for the
+municipality of Cap Haïtien.
 
 ## Installation
 
@@ -43,7 +43,7 @@ This data package has two datasets, `mwater` and `okap`.
 ## mwater
 
 Water point data for the city of Cap Haitien, Haiti. The data collection
-and characterization was done between 2016 and 2022.
+and characterization was done between 2015 and 2022.
 
 ``` r
 library(cbssuitabilityhaiti)
@@ -94,7 +94,8 @@ criteria.
 
 This data includes data from a sanitation zoning report done for the
 city of Cap Haïtien, Haiti in 2022. Additionally, it contains spatial
-data about the neighborhoods of 5 different Haïtien cities. The
+data about the neighborhoods of Cap Haïtien and five other communes in
+Haiti (Canaan, Croix-des-Bouquets, Jérémie, Les Cayes, Mirebalais). The
 attribute table includes data on population density, socioeconomic
 status, suitability of pit latrines, and suggested sewage construction
 priority zones.
@@ -127,7 +128,7 @@ okap
 | zoning | character | “group” if collective or grouped sanitation is possible in short term. |
 | latrine | character | Suggested pit latrine and septic allowance (allowed, not allowed) |
 | density_ra | double | Catgoriccal population density according to the description of the variable “density” (values from 1 to 5) |
-| economy_nu | double | Categotical socioeconomic status according to the description of the variable “economy” (1=low, 2 = medium) |
+| economy_nu | double | Categotical socioeconomic status according to the description of the variable “economy” (1 = medium, 2 = low) |
 | geometry | list | Geospatial data of the neighborhood stored as a polygon |
 
 <img src="man/figures/README-unnamed-chunk-9-1.png" alt="" width="100%" style="display: block; margin: auto;" />
@@ -189,19 +190,20 @@ Please cite using:
 citation("cbssuitabilityhaiti")
 #> To cite package 'cbssuitabilityhaiti' in publications use:
 #> 
-#>   Loos S, Kramer S, Lubeck-Schricker M (????). "cbssuitabilityhaiti:
-#>   Data for a sanitation zoning assessment done for Cap Haitien, Haiti."
+#>   Loos S, Kramer S, Lubeck-Schricker M (2023). "cbssuitabilityhaiti:
+#>   Sanitation Zoning and Water Points, Cap Haitien, Haiti 2015-2022."
 #>   doi:10.5281/zenodo.8361084 <https://doi.org/10.5281/zenodo.8361084>.
 #>   <https://github.com/openwashdata/cbssuitabilityhaiti>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
-#>   @Misc{loos_etall,
-#>     title = {cbssuitabilityhaiti: Data for a sanitation zoning assessment done for Cap Haitien, Haiti},
+#>   @Misc{loos_etall:2023,
+#>     title = {cbssuitabilityhaiti: Sanitation Zoning and Water Points, Cap Haitien, Haiti 2015-2022},
 #>     author = {Sebastian Camilo Loos and Sasha Kramer and Maya Lubeck-Schricker},
+#>     year = {2023},
 #>     doi = {10.5281/zenodo.8361084},
 #>     url = {https://github.com/openwashdata/cbssuitabilityhaiti},
-#>     abstract = {This package contains data for a sanitation zoning assessment done for the city of Cap Haitien, Haiti. It combines two datasets used for an analysis of the suitability of container-based sanitation (CBS).},
+#>     abstract = {This package contains data for a sanitation zoning assessment of Cap Haitien, Haiti, used for an analysis of the suitability of container-based sanitation (CBS). It combines two datasets: neighbourhood level zoning data from a 2022 sanitation zoning assessment, covering Cap Haitien and five other communes in Haiti, and the locations of 1849 water points in the Cap Haitien area from the mWater platform, added between 2015 and 2022.},
 #>     keywords = {open data,washdata,sanitation,sanitation zoning,container-based sanitation,water points,urban planning,Cap Haitien,Haiti,central-america,container-based-sanitation,haiti,open-data,open-datasets,r,suitability-analysis,wash},
 #>     version = {0.0.1},
 #>   }
