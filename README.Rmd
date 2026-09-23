@@ -31,7 +31,7 @@ library(cbssuitabilityhaiti)
 # cbssuitabilityhaiti
 
 <!-- badges: start -->
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8361085.svg)](https://doi.org/10.5281/zenodo.8361085)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8361084.svg)](https://zenodo.org/doi/10.5281/zenodo.8361084)
 [![R-CMD-check](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 <!-- badges: end -->
@@ -200,7 +200,7 @@ knitr::include_graphics("man/figures/screenshot-map-water-access-cap-haitien.png
 ## License
 
 Data are available as
-[CC-BY](https://github.com/openwashdata/cbssuitability/blob/main/LICENSE.md).
+[CC-BY](https://github.com/openwashdata/cbssuitabilityhaiti/blob/main/LICENSE.md).
 
 ## Citation
 

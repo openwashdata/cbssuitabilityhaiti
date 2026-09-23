@@ -22,7 +22,7 @@ Depends:
     R (>= 2.10)
 LazyData: true
 Language: en-GB
-Config/Needs/website: rmarkdown
+Config/Needs/website: rmarkdown, tidyverse, here, sf, tmap, spData, janitor, devtools
 Suggests: 
     tmap
 URL: https://github.com/openwashdata/cbssuitabilityhaiti
