@@ -176,16 +176,17 @@ Please cite using:
 citation("cbssuitabilityhaiti")
 #> To cite package 'cbssuitabilityhaiti' in publications use:
 #> 
-#>   Loos S, Kramer S, Lubeck-Schricker M (2023). "cbssuitabilityhaiti:
-#>   Sanitation Zoning and Water Points, Cap Haitien, Haiti 2015-2022."
-#>   doi:10.5281/zenodo.8361084 <https://doi.org/10.5281/zenodo.8361084>.
+#>   Loos S, Kramer S, Lubeck-Schricker M, Schöbitz L (2023).
+#>   "cbssuitabilityhaiti: Sanitation Zoning and Water Points, Cap
+#>   Haitien, Haiti 2015-2022." doi:10.5281/zenodo.8361084
+#>   <https://doi.org/10.5281/zenodo.8361084>.
 #>   <https://github.com/openwashdata/cbssuitabilityhaiti>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Misc{loos_etall:2023,
 #>     title = {cbssuitabilityhaiti: Sanitation Zoning and Water Points, Cap Haitien, Haiti 2015-2022},
-#>     author = {Sebastian Camilo Loos and Sasha Kramer and Maya Lubeck-Schricker},
+#>     author = {Sebastian Camilo Loos and Sasha Kramer and Maya Lubeck-Schricker and Lars Schöbitz},
 #>     year = {2023},
 #>     doi = {10.5281/zenodo.8361084},
 #>     url = {https://github.com/openwashdata/cbssuitabilityhaiti},

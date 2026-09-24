@@ -2,8 +2,8 @@
 
 ## Authors
 
-- **Sebastian Camilo Loos**. Author, maintainer.
-  [](https://orcid.org/0000-0003-2196-5015)
+- **Sebastian Camilo Loos**. Author.
+  [](https://orcid.org/0000-0002-8830-1734)
 
 - **Sasha Kramer**. Author. [](https://orcid.org/0000-0002-4048-7517)
 
@@ -12,19 +12,23 @@
 
 - **Mian Zhong**. Contributor. [](https://orcid.org/0009-0009-4546-7214)
 
+- **Lars Schöbitz**. Maintainer.
+  [](https://orcid.org/0000-0003-2196-5015)
+
 ## Citation
 
 Source:
 [`inst/CITATION`](https://github.com/openwashdata/cbssuitabilityhaiti/blob/main/inst/CITATION)
 
-Loos S, Kramer S, Lubeck-Schricker M (2023). “cbssuitabilityhaiti:
-Sanitation Zoning and Water Points, Cap Haitien, Haiti 2015-2022.”
+Loos S, Kramer S, Lubeck-Schricker M, Schöbitz L (2023).
+“cbssuitabilityhaiti: Sanitation Zoning and Water Points, Cap Haitien,
+Haiti 2015-2022.”
 [doi:10.5281/zenodo.8361084](https://doi.org/10.5281/zenodo.8361084).
 <https://github.com/openwashdata/cbssuitabilityhaiti>.
 
     @Misc{loos_etall:2023,
       title = {cbssuitabilityhaiti: Sanitation Zoning and Water Points, Cap Haitien, Haiti 2015-2022},
-      author = {Sebastian Camilo Loos and Sasha Kramer and Maya Lubeck-Schricker},
+      author = {Sebastian Camilo Loos and Sasha Kramer and Maya Lubeck-Schricker and Lars Schöbitz},
       year = {2023},
       doi = {10.5281/zenodo.8361084},
       url = {https://github.com/openwashdata/cbssuitabilityhaiti},
