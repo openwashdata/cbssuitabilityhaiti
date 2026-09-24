@@ -31,12 +31,12 @@ library(cbssuitabilityhaiti)
 # cbssuitabilityhaiti
 
 <!-- badges: start -->
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8361085.svg)](https://doi.org/10.5281/zenodo.8361085)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8361084.svg)](https://zenodo.org/doi/10.5281/zenodo.8361084)
 [![R-CMD-check](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 <!-- badges: end -->
 
-The goal of `cbssuitabiility` is to provide datasets for research and
+The goal of `cbssuitabilityhaiti` is to provide datasets for research and
 planning of water and solid waste management in Cap Haïtien, Haiti. This
 package combines datasets collected as part of two different projects.
 The package includes geospatial data about the locations of water access
@@ -78,7 +78,7 @@ This data package has two datasets, `mwater` and `okap`.
 
 ## mwater 
 
-Water point data for the city of Cap Haitien, Haiti. The data collection and characterization was done between 2016 and 2022.
+Water point data for the city of Cap Haitien, Haiti. The data collection and characterization was done between 2015 and 2022.
 
 ```{r}
 library(cbssuitabilityhaiti)
@@ -125,7 +125,8 @@ criteria.
 
 This data includes data from a sanitation zoning report done for the
 city of Cap Haïtien, Haiti in 2022. Additionally, it contains spatial
-data about the neighborhoods of 5 different Haïtien cities. The
+data about the neighborhoods of Cap Haïtien and five other communes in
+Haiti (Canaan, Croix-des-Bouquets, Jérémie, Les Cayes, Mirebalais). The
 attribute table includes data on population density, socioeconomic
 status, suitability of pit latrines, and suggested sewage construction
 priority zones.
@@ -200,7 +201,7 @@ knitr::include_graphics("man/figures/screenshot-map-water-access-cap-haitien.png
 ## License
 
 Data are available as
-[CC-BY](https://github.com/openwashdata/cbssuitability/blob/main/LICENSE.md).
+[CC-BY](https://github.com/openwashdata/cbssuitabilityhaiti/blob/main/LICENSE.md).
 
 ## Citation
 

@@ -22,6 +22,6 @@ mwater
 \description{
 This data includes water point data from the mWater platform. Water points
 are for the city Cap Haitien, Haiti in 2022. The data collection and
-characterization was done between 2016 and 2022.
+characterization was done between 2015 and 2022.
 }
 \keyword{datasets}
