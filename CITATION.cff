@@ -21,7 +21,7 @@ authors:
 - family-names: Loos
   given-names: Sebastian Camilo
   email: seba.loos@hotmail.com
-  orcid: https://orcid.org/0000-0003-2196-5015
+  orcid: https://orcid.org/0000-0002-8830-1734
 - family-names: Kramer
   given-names: Sasha
   email: skramer@oursoil.org
@@ -30,13 +30,17 @@ authors:
   given-names: Maya
   email: mlubeck-schricker@oursoil.org
   orcid: https://orcid.org/0000-0002-8659-5943
+- family-names: Schöbitz
+  given-names: Lars
+  email: lschoebitz@ethz.ch
+  orcid: https://orcid.org/0000-0003-2196-5015
 repository-code: https://github.com/openwashdata/cbssuitabilityhaiti
 url: https://github.com/openwashdata/cbssuitabilityhaiti
 date-released: '2023-09-19'
 contact:
-- family-names: Loos
-  given-names: Sebastian Camilo
-  email: seba.loos@hotmail.com
+- family-names: Schöbitz
+  given-names: Lars
+  email: lschoebitz@ethz.ch
   orcid: https://orcid.org/0000-0003-2196-5015
 keywords:
 - open data

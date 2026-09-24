@@ -2,14 +2,16 @@ Package: cbssuitabilityhaiti
 Title: Sanitation Zoning and Water Points, Cap Haitien, Haiti 2015-2022
 Version: 0.0.1
 Authors@R: c(
-    person("Sebastian Camilo", "Loos", , "seba.loos@hotmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0003-2196-5015")),
+    person("Sebastian Camilo", "Loos", , "seba.loos@hotmail.com", role = "aut",
+           comment = c(ORCID = "0000-0002-8830-1734")),
     person("Sasha", "Kramer", , "skramer@oursoil.org", role = "aut",
            comment = c(ORCID = "0000-0002-4048-7517")),
     person("Maya", "Lubeck-Schricker", , "mlubeck-schricker@oursoil.org", role = "aut",
            comment = c(ORCID = "0000-0002-8659-5943")),
     person("Mian", "Zhong", , "mzhong@ethz.ch", role = "ctb",
-           comment = c(ORCID = "0009-0009-4546-7214"))
+           comment = c(ORCID = "0009-0009-4546-7214")),
+    person("Lars", "Schöbitz", , "lschoebitz@ethz.ch", role = "cre",
+           comment = c(ORCID = "0000-0003-2196-5015"))
   )
 Description: This package contains data for a sanitation zoning assessment of
     Cap Haitien, Haiti, used for an analysis of the suitability of
