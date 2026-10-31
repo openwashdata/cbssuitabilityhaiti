@@ -11,6 +11,8 @@
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 <!-- badges: end -->
 
+A data package published by [openwashdata](https://openwashdata.org).
+
 The goal of `cbssuitabilityhaiti` is to provide datasets for research
 and planning of water and solid waste management in Cap Haïtien, Haiti.
 This package combines datasets collected as part of two different
