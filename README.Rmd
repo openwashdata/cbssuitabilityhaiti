@@ -28,15 +28,13 @@ library(tmap)
 library(cbssuitabilityhaiti)
 ```
 
-# cbssuitabilityhaiti
+# cbssuitabilityhaiti <a href="https://openwashdata.org"><img src="man/figures/logo.png" align="right" width="120" alt="openwashdata" /></a>
 
 <!-- badges: start -->
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8361084.svg)](https://zenodo.org/doi/10.5281/zenodo.8361084)
 [![R-CMD-check](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/cbssuitabilityhaiti/actions/workflows/R-CMD-check.yaml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 <!-- badges: end -->
-
-A data package published by [openwashdata](https://openwashdata.org).
 
 The goal of `cbssuitabilityhaiti` is to provide datasets for research and
 planning of water and solid waste management in Cap Haïtien, Haiti. This
@@ -206,6 +204,8 @@ Data are available as
 [CC-BY](https://github.com/openwashdata/cbssuitabilityhaiti/blob/main/LICENSE.md).
 
 ## Citation
+
+Published by openwashdata, <https://openwashdata.org>.
 
 Please cite using:
 

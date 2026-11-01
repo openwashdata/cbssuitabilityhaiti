@@ -11,3 +11,5 @@
 ^docs$
 ^pkgdown$
 ^\.github$
+^_brand\.yml$
+^logos$
